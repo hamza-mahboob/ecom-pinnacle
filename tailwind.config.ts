@@ -13,7 +13,8 @@ const config: Config = {
 			primaryColor: "#0E096B",
 			secondaryColor: "#F8A62B",
 			textColor: "#595959",
-			hoverTextColor: "#000000"
+			hoverTextColor: "#000000",
+			headingColor:"#331B3B",
 		}
   	}
   },
