@@ -36,7 +36,7 @@ export default function MyCarousel() {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="basis-1/3">
               <Card>
-                <CardContent className="flex aspect-video items-center justify-center shadow-xl">
+                <CardContent className="flex aspect-video items-center justify-center ring-0 outline-none border-none">
                   {/* <span className="text-3xl font-semibold">{index + 1}</span> */}
                   <Image src={cimg} alt="Carousel Image" className="object-fill" />
                 </CardContent>

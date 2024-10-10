@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../public/imgs/Final.png";
+import logo from "../app/public/imgs/Final.png";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {

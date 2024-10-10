@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Typography } from "../MTailwind";
-import logo from '../public/imgs/bawlogo.png'
+import { Typography } from "../app/MTailwind";
+import logo from '../app/public/imgs/bawlogo.png'
 
 
 const LINKS = [
