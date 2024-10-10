@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Typography } from "../MTailwind";
-import logo from '../public/imgs/Final.png'
+import logo from '../public/imgs/bawlogo.png'
 
 
 const LINKS = [
@@ -29,10 +29,10 @@ export default function Footer() {
     <footer className="relative w-full bg-primaryColor">
       <div className="mx-auto w-full max-w-[100rem] p-8 pt-32">
         <div className="flex flex-col lg:flex-row gap-28 justify-center">
-          <div className="mx-10 bg-white">
-            <Image src={logo} alt="Logo" height={512} width={216} />
+          <div className="mr-20">
+            <Image src={logo} alt="Logo" height={256} width={108} />
           </div>
-          <div className="grid grid-cols-4 justify-between gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-y-10 md:gap-y-0 gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex mb-2 mt-12 gap-9 text-white sm:justify-center">
+        <div className="flex mb-2 mt-12 gap-2 md:gap-9 text-white justify-center">
           <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
             <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -103,7 +103,7 @@ export default function Footer() {
             </svg>
           </Typography>
         </div>
-        <div className="mt-4 flex w-[27rem] mx-auto flex-col items-center justify-center border-t border-blue-gray-50 pt-4 md:flex-row md:justify-between">
+        <div className="mt-4 flex w-56 md:w-[27rem] mx-auto flex-col items-center justify-center border-t border-blue-gray-50 pt-4 md:flex-row md:justify-between">
           <Typography
             variant="h6"
             className=" text-center mx-auto font-normal text-white md:mb-0"

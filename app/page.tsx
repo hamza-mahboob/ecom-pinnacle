@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import topRightVector from "./public/imgs/top-right-vector.png";
 import ctaImg from "./public/imgs/CTA-Banner.png";
 import aboutUs from "./public/imgs/about-us.png";
+import MyCarousel from "../components/ui/MyCarousel";
 
 export default function Home() {
   return (
@@ -71,6 +72,9 @@ export default function Home() {
             For Your Business
           </h1>
           <div className="h-[8px] w-[160px] bg-secondaryColor -mt-2 mb-[27px] ml-[780px]"></div>
+          <div className="ml-80 mt-10">
+            <MyCarousel />
+          </div>
         </div>
       </section>
 
