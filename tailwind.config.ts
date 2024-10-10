@@ -9,14 +9,15 @@ const config: Config = withMT({
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        primaryColor: "#0E096B",
-        secondaryColor: "#F8A62B",
-        textColor: "#595959",
-        hoverTextColor: "#000000",
-      },
-    },
+  	extend: {
+  		colors: {
+			primaryColor: "#0E096B",
+			secondaryColor: "#F8A62B",
+			textColor: "#595959",
+			hoverTextColor: "#000000",
+			headingColor:"#331B3B",
+		}
+  	}
   },
   plugins: [require("tailwindcss-animate")],
 });
