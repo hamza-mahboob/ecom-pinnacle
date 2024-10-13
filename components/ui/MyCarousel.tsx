@@ -11,10 +11,13 @@ import {
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import cimg from '../../app/public/imgs/MyCarousel img.png'
+import Image, { StaticImageData } from "next/image"
 
-export default function MyCarousel() {
+interface MyCarouselProps {
+  images: { src: StaticImageData, alt: string, width?: number, height?: number, myClass?: string, basis?: string }[]
+}
+
+export default function MyCarousel({ images }: MyCarouselProps) {
   const [api, setApi] = React.useState<any>()
 
   const scrollPrev = React.useCallback(() => {
@@ -30,15 +33,20 @@ export default function MyCarousel() {
   }, [api])
 
   return (
-    <div className="relative w-full max-w-5xl">
+    <div className={`relative ${images[0].myClass}`}>
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-1/3">
+          {images.map((image, index) => (
+            <CarouselItem key={index} className={`${images[0].basis}`}>
               <Card>
-                <CardContent className="flex aspect-video items-center justify-center ring-0 outline-none border-none">
-                  {/* <span className="text-3xl font-semibold">{index + 1}</span> */}
-                  <Image src={cimg} alt="Carousel Image" className="object-fill" />
+                <CardContent className="flex items-center justify-center ring-0 outline-none border-none">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width || 800}  // Default width 800px
+                    height={image.height || 600}  // Default height 600px
+                    className="object-cover w-full"
+                  />
                 </CardContent>
               </Card>
             </CarouselItem>

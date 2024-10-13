@@ -1,6 +1,7 @@
 import Image from "next/image";
 import hero from "./public/imgs/hero.png";
 import { Button } from "@/components/ui/button";
+import Accordian from '../components/ui/Accordian'
 import topRightVector from "./public/imgs/top-right-vector.png";
 import ctaImg from "./public/imgs/CTA-Banner.png";
 import ctaImg2 from "./public/imgs/CTA-Banner-2.png";
@@ -11,6 +12,10 @@ import BlogCard from "@/components/BlogCard";
 import blogImg1 from "./public/imgs/blog-img-1.png";
 import blogImg2 from "./public/imgs/blog-img-2.png";
 import blogImg3 from "./public/imgs/blog-img-3.png";
+import c1p1 from './public/imgs/c1p1.png'
+import c2p1 from './public/imgs/c2p1.png'
+import gridImg1 from './public/imgs/gridImg1.png'
+import accordianPic from './public/imgs/accordianPic.png'
 
 export default function Home() {
   return (
@@ -40,6 +45,12 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Vector positioned at the top right */}
+        <Image
+          src={topRightVector}
+          alt="Top Right Vector"
+          className="absolute top-0 right-0 w-[750px] h-[700px] pointer-events-none" // Adjust size as needed
+        />
         {/* Vector positioned at the top right */}
         <Image
           src={topRightVector}
@@ -79,7 +90,16 @@ export default function Home() {
           </h1>
           <div className="h-[8px] w-[160px] bg-secondaryColor -mt-2 mb-[27px] ml-[660px]"></div>
           <div className="ml-80 mt-10">
-            <MyCarousel />
+            <MyCarousel
+              images={[
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700, myClass: 'w-[80rem]', basis: 'md:basis-1/3 basis-1/4' },
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700, },
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700, },
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700, },
+                // Add more images here
+              ]}
+            />
+
           </div>
         </div>
       </section>
@@ -113,6 +133,40 @@ export default function Home() {
                 EXPLORE MORE
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Recent Work */}
+      <section className="w-full mb-[120px] my-20">
+        <div className=" ml-auto bg-[#FEEDD5] flex flex-col w-[100rem] text-center rounded-tl-[25rem] h-[42rem]">
+          <div className="flex">
+            <div className="flex flex-col -ml-40">
+              <h1 className="text-headingColor text-start text-[48px] font-bold leading-[1] mt-[92px]">
+                Our Recent Work
+              </h1>
+              <h1 className="text-headingColor text-start text-[48px] font-extralight leading-[1] z-10">
+                By Our Experts
+              </h1>
+              <div className="h-[8px] w-[160px] bg-secondaryColor -mt-2 mb-[27px] ml-[9rem]"></div>
+            </div>
+            <div className="w-[32rem] ml-auto flex items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
+              <h3>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </h3>
+            </div>
+          </div>
+
+          <div className="ml-52 mt-20">
+            <MyCarousel
+              images={[
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700, myClass: 'w-[80rem]', basis: 'md:basis-2/5 basis-1/4' },
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700 },
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700 },
+                { src: c1p1, alt: 'Carousel Image 1', width: 1000, height: 700 },
+                // Add more images here
+              ]}
+            />
           </div>
         </div>
       </section>
@@ -168,12 +222,48 @@ export default function Home() {
         />
       </section>
 
-      {/* Vector positioned at the top right */}
-      <Image
-        src={topRightVector}
-        alt="Top Right Vector"
-        className="absolute top-0 right-0 w-[750px] h-[700px] pointer-events-none" // Adjust size as needed
-      />
+      {/* Grid */}
+      <section>
+        <div className="w-full">
+          <h1 className="text-center text-4xl my-20 font-semibold">
+            Our clients success stories
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-[65rem] gap-y-5 place-items-center">
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 place-items-center w-full p-5 gap-2 mx-auto my-20">
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+            <Image src={gridImg1} alt="grid image" />
+          </div>
+
+        </div>
+      </section>
+
+      {/* Accordian */}
+      <section>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-20 mx-auto">
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-semibold mb-10">Frequently Asked Questions</h1>
+            <div className="max-w-[35rem]">
+              <Accordian />
+            </div>
+          </div>
+          <Image src={accordianPic} alt="Accordian Pic" />
+        </div>
+      </section>
+
+
     </>
   );
 }
