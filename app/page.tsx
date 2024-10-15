@@ -86,8 +86,8 @@ export default function Home() {
 
       {/* Services */}
       <section className="w-full mb-[120px]">
-        <div className="container mx-auto bg-[#FEEDD5] flex flex-col text-center rounded-tr-full h-[578px]">
-          <h1 className="text-headingColor text-[48px] font-bold leading-[1] mt-[92px]">
+        <div className="lg:container mx-auto bg-[#FEEDD5] flex flex-col text-center rounded-tr-full h-[578px]">
+          <h1 className="text-headingColor text-3xl lg:text-[48px] font-bold leading-[1] mt-[92px]">
             What We Do
           </h1>
           <h1 className="text-headingColor text-3xl lg:text-[48px] font-light leading-[1] z-10">
@@ -128,10 +128,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* About Us */}
-      <section className="w-full mt-[15px] px-5 mb-[120px]">
+      <section className="w-full mt-[15px] px-5">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-start">
             <Image src={aboutUs} alt="about us img" className="z-10" />
@@ -165,18 +165,18 @@ export default function Home() {
 
       {/* Our Recent Work */}
       <section className="w-full mb-[120px] my-20">
-        <div className=" ml-auto bg-[#FEEDD5] flex flex-col w-[100rem] text-center rounded-tl-[25rem] h-[42rem]">
-          <div className="flex">
+        <div className=" ml-auto bg-[#FEEDD5] flex flex-col w-full md:w-10/12  text-center rounded-tl-[25rem] h-[42rem]">
+          <div className="flex container mx-auto">
             <div className="flex flex-col ml-0 items-center md:-ml-20 lg:-ml-40">
               <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-bold leading-[1] mt-[92px]">
                 Our Recent Work
               </h1>
-              <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-extralight leading-[1] z-10">
+              <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-normal leading-[1] z-10">
                 By Our Experts
               </h1>
               <div className="h-[8px] w-28 lg:w-[155px] bg-secondaryColor -mt-2 mb-[27px] ml-[7rem] lg:ml-[10rem]"></div>
             </div>
-            <div className="hidden lg:flex w-[20rem] lg:w-[32rem] ml-auto items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
+            <div className="hidden md:flex w-[20rem] lg:w-[32rem] ml-auto items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
               <h3>
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
@@ -219,7 +219,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Our Values that Drive Digital Marketing */}
       <OurValues />

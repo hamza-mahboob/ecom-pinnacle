@@ -108,7 +108,7 @@ export default function Testimonial() {
     <section className="mb-[120px]">
       <div className="container mx-auto px-5">
         <div className="flex flex-col">
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-0">
             <h1 className="text-6xl">What Our Clients Say About Us</h1>
             <div className="flex flex-row gap-5">
               <div
