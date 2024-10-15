@@ -7,10 +7,6 @@ import ctaImg from "./public/imgs/CTA-Banner.png";
 import ctaImg2 from "./public/imgs/CTA-Banner-2.png";
 import aboutUs from "./public/imgs/about-us.png";
 import MyCarousel from "../components/ui/MyCarousel";
-import BlogCard from "@/components/BlogCard";
-import blogImg1 from "./public/imgs/blog-img-1.png";
-import blogImg2 from "./public/imgs/blog-img-2.png";
-import blogImg3 from "./public/imgs/blog-img-3.png";
 import c1p1 from "./public/imgs/c1p1.png";
 import gridImg1 from "./public/imgs/gridImg1.png";
 import gridImg2 from "./public/imgs/gridImg2.png";
@@ -67,7 +63,7 @@ export default function Home() {
       {/* CTA Section with background image */}
       <section
         className="flex flex-col lg:flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-5 md:mx-auto my-[120px] justify-around items-center text-center lg:text-start px-5 rounded-3xl bg-cover bg-center text-white"
-        style={{ backgroundImage: `url(${ctaImg.src})`}}
+        style={{ backgroundImage: `url(${ctaImg.src})` }}
       >
         <div className="text-center">
           <h2 className="text-[32px] lg:text-[64px] w-full lg:w-[393px]">Elevate Your Brand Today!</h2>
@@ -283,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial */}
-      <Testimonial/>
+      <Testimonial />
 
       {/* Accordian */}
       <section>
