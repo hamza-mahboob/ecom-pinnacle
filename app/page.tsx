@@ -30,13 +30,13 @@ export default function Home() {
       <section className="w-full mt-[15px] px-5">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-start">
-            <div className="mt-[120px] w-[530px] order-2 lg:order-1">
-              <h1 className="text-headingColor text-[87px] font-light leading-[1]">
+            <div className="mt-[120px] w-full lg:w-[530px] order-2 lg:order-1">
+              <h1 className="text-headingColor text-4xl md:text-[87px] font-light leading-[1]">
                 <span className="font-bold">We Help you</span> to grow your
                 <span className="font-light"> Business</span>
               </h1>
 
-              <div className="h-[12px] w-[310px] bg-secondaryColor -mt-4 mb-[27px] ml-20 lg:ml-0"></div>
+              <div className="h-[12px] w-36 md:w-[22rem] lg:w-[310px] bg-secondaryColor -mt-2 lg:-mt-4 mb-[27px] ml-[136px] md:ml-[190px] lg:ml-0"></div>
 
               <p className="text-headingColor opacity-[66%]">
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -66,15 +66,15 @@ export default function Home() {
 
       {/* CTA Section with background image */}
       <section
-        className="flex flex-col lg:flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-auto my-[120px] justify-around items-center text-center lg:text-start px-5 rounded-3xl bg-cover bg-center text-white"
-        style={{ backgroundImage: `url(${ctaImg.src})` }}
+        className="flex flex-col lg:flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-5 md:mx-auto my-[120px] justify-around items-center text-center lg:text-start px-5 rounded-3xl bg-cover bg-center text-white"
+        style={{ backgroundImage: `url(${ctaImg.src})`}}
       >
-        <div className="text-center ">
-          <h2 className="text-[64px] w-[393px]">Elevate Your Brand Today!</h2>
+        <div className="text-center">
+          <h2 className="text-[32px] lg:text-[64px] w-full lg:w-[393px]">Elevate Your Brand Today!</h2>
         </div>
 
-        <div className="w-[483px] ">
-          <p className="mt-4 text-lg">
+        <div className="w-full lg:w-[483px]">
+          <p className="lg:mt-4 text-lg">
             Ready to transform your digital dresence? Let's create magic
             together! book our services now!
           </p>
@@ -85,16 +85,16 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      {/* <section className="w-full mb-[120px]">
+      <section className="w-full mb-[120px]">
         <div className="container mx-auto bg-[#FEEDD5] flex flex-col text-center rounded-tr-full h-[578px]">
           <h1 className="text-headingColor text-[48px] font-bold leading-[1] mt-[92px]">
             What We Do
           </h1>
-          <h1 className="text-headingColor text-[48px] font-light leading-[1] z-10">
+          <h1 className="text-headingColor text-3xl lg:text-[48px] font-light leading-[1] z-10">
             For Your Business
           </h1>
-          <div className="h-[8px] w-[160px] bg-secondaryColor -mt-2 mb-[27px] ml-[370px] lg:ml-[660px]"></div>
-          <div className="ml-80 mt-10">
+          <div className="h-[8px] w-[120px] lg:w-[195px] bg-secondaryColor -mt-2 mb-[27px] ml-[188px] md:ml-[400px] lg:ml-[41rem]"></div>
+          <div className="md:ml-72 mt-20 lg:mt-6 max-w-full lg:w-full">
             <MyCarousel
               images={[
                 {
@@ -102,8 +102,8 @@ export default function Home() {
                   alt: "Carousel Image 1",
                   width: 1000,
                   height: 700,
-                  myClass: "w-[80rem]",
-                  basis: "md:basis-1/3 basis-1/4",
+                  myClass: "w-full",
+                  basis: "lg:basis-2/6 md:basis-4/5 basis-11/12",
                 },
                 {
                   src: c1p1,
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-start">
             <Image src={aboutUs} alt="about us img" className="z-10" />
-            <div className="mt-[120px] w-[530px]">
+            <div className="mt-[120px] w-full lg:w-[530px]">
               <h1 className="text-headingColor text-[48px] font-bold leading-[1]">
                 About Us
               </h1>
@@ -164,19 +164,19 @@ export default function Home() {
       </section>
 
       {/* Our Recent Work */}
-      {/* <section className="w-full mb-[120px] my-20">
+      <section className="w-full mb-[120px] my-20">
         <div className=" ml-auto bg-[#FEEDD5] flex flex-col w-[100rem] text-center rounded-tl-[25rem] h-[42rem]">
           <div className="flex">
-            <div className="flex flex-col -ml-40">
-              <h1 className="text-headingColor text-start text-[48px] font-bold leading-[1] mt-[92px]">
+            <div className="flex flex-col ml-0 items-center md:-ml-20 lg:-ml-40">
+              <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-bold leading-[1] mt-[92px]">
                 Our Recent Work
               </h1>
-              <h1 className="text-headingColor text-start text-[48px] font-extralight leading-[1] z-10">
+              <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-extralight leading-[1] z-10">
                 By Our Experts
               </h1>
-              <div className="h-[8px] w-[155px] bg-secondaryColor -mt-2 mb-[27px] ml-[10rem]"></div>
+              <div className="h-[8px] w-28 lg:w-[155px] bg-secondaryColor -mt-2 mb-[27px] ml-[7rem] lg:ml-[10rem]"></div>
             </div>
-            <div className="w-[32rem] ml-auto flex items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
+            <div className="hidden lg:flex w-[20rem] lg:w-[32rem] ml-auto items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
               <h3>
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
@@ -185,7 +185,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="ml-52 mt-20">
+          <div className="md:ml-56 lg:ml-80 mt-32 max-w-full">
             <MyCarousel
               images={[
                 {
@@ -193,8 +193,8 @@ export default function Home() {
                   alt: "Carousel Image 1",
                   width: 1000,
                   height: 700,
-                  myClass: "w-[80rem]",
-                  basis: "md:basis-2/5 basis-1/4",
+                  myClass: "w-full",
+                  basis: "lg:basis-2/6 md:basis-5/6 basis-11/12",
                 },
                 {
                   src: c1p1,
@@ -262,7 +262,7 @@ export default function Home() {
             Our clients success stories
           </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-[65rem] gap-y-5 place-items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-[65rem] gap-y-5 place-items-center p-2">
             <Image src={gridImg1} alt="grid image" />
             <Image src={gridImg2} alt="grid image" />
             <Image src={gridImg3} alt="grid image" />
@@ -287,7 +287,7 @@ export default function Home() {
 
       {/* Accordian */}
       <section>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-20 mx-auto">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-20 mx-auto p-5">
           <div className="flex flex-col">
             <h1 className="text-3xl font-semibold mb-10">
               Frequently Asked Questions
@@ -302,7 +302,7 @@ export default function Home() {
 
       {/* CTA Section 2 with background image */}
       <section
-        className="flex flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-auto my-[120px] justify-between px-5 rounded-3xl"
+        className="flex flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-5 md:mx-auto my-[120px] justify-between px-5 rounded-3xl"
         style={{
           backgroundImage: `url(${ctaImg2.src})`,
           backgroundSize: "cover",
