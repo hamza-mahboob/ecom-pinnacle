@@ -22,6 +22,7 @@ import gridImg7 from "./public/imgs/gridImg7.png";
 import gridImg8 from "./public/imgs/gridImg8.png";
 import accordianPic from "./public/imgs/accordianPic.png";
 import OurValues from "@/components/OurValues";
+import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -84,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="w-full mb-[120px]">
+      {/* <section className="w-full mb-[120px]">
         <div className="container mx-auto bg-[#FEEDD5] flex flex-col text-center rounded-tr-full h-[578px]">
           <h1 className="text-headingColor text-[48px] font-bold leading-[1] mt-[92px]">
             What We Do
@@ -127,10 +128,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Us */}
-      <section className="w-full mt-[15px] px-5">
+      <section className="w-full mt-[15px] px-5 mb-[120px]">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-start">
             <Image src={aboutUs} alt="about us img" className="z-10" />
@@ -163,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* Our Recent Work */}
-      <section className="w-full mb-[120px] my-20">
+      {/* <section className="w-full mb-[120px] my-20">
         <div className=" ml-auto bg-[#FEEDD5] flex flex-col w-[100rem] text-center rounded-tl-[25rem] h-[42rem]">
           <div className="flex">
             <div className="flex flex-col -ml-40">
@@ -218,13 +219,13 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Values that Drive Digital Marketing */}
       <OurValues />
 
       {/* Blogs */}
-      <section className="w-full my-[120px] px-5">
+      {/* <section className="w-full my-[120px] px-5">
         <div className="container mx-auto">
           <div className="flex flex-col items-center gap-4">
             <h1 className="font-semibold text-[#4D4D4D] text-4xl">
@@ -252,7 +253,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Grid */}
       <section>
@@ -280,6 +281,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonial */}
+      <Testimonial/>
 
       {/* Accordian */}
       <section>

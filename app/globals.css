@@ -9,3 +9,15 @@
     @apply text-[44px] leading-[54px] font-[700] text-headingColor;
   }
 }
+
+/* styles/globals.css or any global stylesheet */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #e5e7eb !important; /* Tailwind gray-200 */
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #1d4ed8 !important; /* Tailwind blue-600 */
+}
