@@ -25,17 +25,17 @@ export default function OurValues() {
       <div className="container mx-auto relative z-10" ref={ref}>
         <div className="flex flex-col lg:flex-row items-center lg:justify-around py-[96px]">
           <div className="flex flex-col mb-28 lg:mb-0 gap-32 text-center lg:text-start">
-            <div className="w-[560px] ">
+            <div className="w-full lg:w-[560px] ">
               <h1 className="font-semibold text-5xl leading-relaxed mb-[16px]">
                 Our Values that Drive Digital Marketing
               </h1>
-              <p>
+              <p className="p-5">
                 Et et id laoreet ultricies elementum venenatis ornare.
                 Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus
                 quis egestas tincidunt neque ut accumsan.
               </p>
             </div>
-            <div className="flex flex-row gap-24">
+            <div className="flex flex-col lg:flex-row gap-24">
               <div className="flex flex-col gap-2">
                 <h1 className="text-5xl font-semibold">
                   {inView ? (

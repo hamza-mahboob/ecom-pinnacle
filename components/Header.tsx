@@ -10,7 +10,7 @@ export default function Header() {
           <div className="flex flex-row justify-between items-center">
             <Image src={logo} alt="Logo" width={128} height={54} />
 
-            <div className="flex gap-10">
+            <div className="hidden md:flex gap-10">
               <h1 className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Home
               </h1>

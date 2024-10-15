@@ -53,7 +53,7 @@ export default function MyCarousel({ images }: MyCarouselProps) {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="absolute bottom-2 -left-40 flex space-x-6">
+      <div className="absolute -bottom-20 md:bottom-2 right-20 md:-left-40 flex space-x-6">
         <Button variant="outline" size="icon" onClick={scrollPrev} className="outline-black outline outline-2 rounded-full h-8 w-8">
           <ChevronLeft className="h-7 w-7 " />
         </Button>
