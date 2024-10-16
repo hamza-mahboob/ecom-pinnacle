@@ -58,12 +58,13 @@ export default function Testimonial() {
     }
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startXRef.current = e.touches[0].clientX;
     isDragging.current = true;
   };
 
-  const handleTouchMove = (e) => {
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     if (!isDragging.current) return;
     const touchX = e.touches[0].clientX;
     const distance = startXRef.current - touchX;
@@ -81,12 +82,13 @@ export default function Testimonial() {
     isDragging.current = false;
   };
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     startXRef.current = e.clientX;
     isDragging.current = true;
   };
 
-  const handleMouseMove = (e) => {
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging.current) return;
     const mouseX = e.clientX;
     const distance = startXRef.current - mouseX;
@@ -145,9 +147,8 @@ export default function Testimonial() {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
-                    className={`mr-4 ${
-                      currentIndex === index ? "flex" : "hidden"
-                    } sm:flex`}
+                    className={`mr-4 ${currentIndex === index ? "flex" : "hidden"
+                      } sm:flex`}
                   >
                     <TestimonialCard
                       name={testimonial.name}

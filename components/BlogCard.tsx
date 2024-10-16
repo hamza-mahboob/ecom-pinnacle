@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import Image, { StaticImageData } from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 

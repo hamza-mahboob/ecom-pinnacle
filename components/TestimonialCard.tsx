@@ -1,7 +1,15 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
 
-export default function TestimonialCard({ name, position, feedback, img }:any) {
+interface props {
+  name: string,
+  position: string,
+  feedback: string,
+  img: string | StaticImport
+}
+
+export default function TestimonialCard({ name, position, feedback, img }: props) {
   return (
     <div className="fw-[513px] h-[312px] bg-primaryColor text-white rounded-3xl p-10">
       <div className="flex flex-row gap-5 items-center mb-[19px]">

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Typography } from "../app/MTailwind";
 import logo from '../app/public/imgs/bawlogo.png'
 
 
@@ -35,24 +34,17 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-y-10 md:gap-y-0 gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
-                <Typography
-                  variant="h5"
-                  color="white"
-                  className="mb-3 font-medium"
+                <li
+                  className="mb-3 text-gray-50 font-semibold tracking-wide"
                 >
                   {title}
-                </Typography>
+                </li>
                 {items.map((link) => (
                   <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="white"
-                      className="py-1.5 font-light transition-colors hover:text-white break-words"
-                      style={{fontWeight:100}}
-                    >
+                    <h1
+                      className="py-1.5 font-light transition-colors text-gray-50 hover:cursor-pointer hover:text-gray-400 break-words">
                       {link}
-                    </Typography>
+                    </h1>
                   </li>
                 ))}
               </ul>
@@ -61,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div className="flex mb-2 mt-12 gap-2 md:gap-9 text-white justify-center">
-          <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+          <div className="opacity-80 transition-opacity hover:opacity-100">
             <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fillRule="evenodd"
@@ -69,8 +61,8 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-          </Typography>
-          <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+          </div>
+          <div className="opacity-80 transition-opacity hover:opacity-100">
             <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fillRule="evenodd"
@@ -78,13 +70,13 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-          </Typography>
-          <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+          </div>
+          <div className="opacity-80 transition-opacity hover:opacity-100">
             <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
             </svg>
-          </Typography>
-          <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+          </div>
+          <div className="opacity-80 transition-opacity hover:opacity-100">
             <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fillRule="evenodd"
@@ -92,8 +84,8 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-          </Typography>
-          <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+          </div>
+          <div className="opacity-80 transition-opacity hover:opacity-100">
             <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fillRule="evenodd"
@@ -101,16 +93,15 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-          </Typography>
+          </div>
         </div>
         <div className="mt-4 flex w-56 md:w-[27rem] mx-auto flex-col items-center justify-center border-t border-blue-gray-50 pt-4 md:flex-row md:justify-between">
-          <Typography
-            variant="h6"
+          <h1
             className=" text-center mx-auto font-normal text-white md:mb-0"
           >
             <span>Copyright</span> &copy; {currentYear} <a href="#">Ecom Pinnacle</a>. All
             Rights Reserved.
-          </Typography>
+          </h1>
 
         </div>
       </div>
