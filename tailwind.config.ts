@@ -15,7 +15,8 @@ const config: Config = withMT({
   			secondaryColor: '#F8A62B',
   			textColor: '#595959',
   			hoverTextColor: '#000000',
-  			headingColor: '#331B3B'
+  			headingColor: '#331B3B',
+			titleColor: '#101828'
   		},
   		keyframes: {
   			'accordion-down': {
