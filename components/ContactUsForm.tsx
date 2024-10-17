@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -23,7 +22,7 @@ const FormSchema = z.object({
     message: "Full Name must be at least 2 characters.",
   }),
   email: z.string().email({ message: "Invalid email address." }),
-  company: z.string().min(1,{
+  company: z.string().min(1, {
     message: "Company Name must be present"
   }),
   subject: z.string().min(3, {
@@ -63,7 +62,7 @@ export default function ContactUsForm() {
         <FormField
           control={form.control}
           name="fullName"
-          render={({ field }) => (
+          render={({ field }: any) => (
             <FormItem>
               <FormLabel className="text-[20px] font-semibold">Full Name *</FormLabel>
               <FormControl>
@@ -76,7 +75,7 @@ export default function ContactUsForm() {
         <FormField
           control={form.control}
           name="email"
-          render={({ field }) => (
+          render={({ field }: any) => (
             <FormItem>
               <FormLabel className="text-[20px] font-semibold">Your Email *</FormLabel>
               <FormControl>
@@ -89,7 +88,7 @@ export default function ContactUsForm() {
         <FormField
           control={form.control}
           name="company"
-          render={({ field }) => (
+          render={({ field }: any) => (
             <FormItem>
               <FormLabel className="text-[20px] font-semibold">Company</FormLabel>
               <FormControl>
@@ -102,31 +101,31 @@ export default function ContactUsForm() {
         <FormField
           control={form.control}
           name="subject"
-          render={({ field }) => (
+          render={({ field }: any) => (
             <FormItem>
               <FormLabel className="text-[20px] font-semibold">Subject *</FormLabel>
               <FormControl>
                 <Input placeholder="Subject" {...field} />
               </FormControl>
-              <FormMessage className="text-red-500"/>
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
           name="message"
-          render={({ field }) => (
+          render={({ field }: any) => (
             <FormItem>
               <FormLabel className="text-[20px] font-semibold">Message *</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your message here" {...field} as="textarea" rows={7}  className="resize-none"/>
+                <Textarea placeholder="Your message here" {...field} as="textarea" rows={7} className="resize-none" />
               </FormControl>
-              <FormMessage className="text-red-500"/>
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
         <div className="flex items-center justify-center">
-        <Button className="flex items-center justify-center w-[193px] h-[61px] bg-primaryColor text-white text-[18px] rounded-2xl" type="submit">Submit</Button></div>
+          <Button className="flex items-center justify-center w-[193px] h-[61px] bg-primaryColor text-white text-[18px] rounded-2xl" type="submit">Submit</Button></div>
       </form>
     </Form>
   )
