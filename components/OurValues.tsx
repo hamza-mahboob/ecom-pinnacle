@@ -15,7 +15,7 @@ export default function OurValues() {
 
   return (
     <section
-      className="w-full relative"
+      className="w-full relative p-3"
       style={{
         backgroundImage: `url(${ourValuesBg.src})`,
         backgroundSize: "cover",
@@ -29,13 +29,13 @@ export default function OurValues() {
               <h1 className="font-semibold text-5xl leading-relaxed mb-[16px]">
                 Our Values that Drive Digital Marketing
               </h1>
-              <p className="p-5">
+              <p className="py-5">
                 Et et id laoreet ultricies elementum venenatis ornare.
                 Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus
                 quis egestas tincidunt neque ut accumsan.
               </p>
             </div>
-            <div className="flex flex-col lg:flex-row gap-24">
+            <div className="flex flex-col md:flex-row mx-auto lg:mx-0 gap-24">
               <div className="flex flex-col gap-2">
                 <h1 className="text-5xl font-semibold">
                   {inView ? (
