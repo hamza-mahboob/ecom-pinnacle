@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from "../app/public/imgs/Final.png";
 import { Button } from "@/components/ui/button";
 import { MenuIcon, XIcon } from "@heroicons/react/outline"; // Example icons from Heroicons
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,18 +40,18 @@ export default function Header() {
 
             {/* Navigation links - hidden on small screens, visible on medium and above */}
             <div className="hidden md:flex gap-10">
-              <h1 className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Home
-              </h1>
-              <h1 className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              </Link>
+              <Link href='/services' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Services
-              </h1>
-              <h1 className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              </Link>
+              <Link href='/about' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 About
-              </h1>
-              <h1 className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              </Link>
+              <Link href='/contact-us' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Contact Us
-              </h1>
+              </Link>
             </div>
 
             {/* Book a Call Button - hidden on small screens */}
@@ -62,18 +63,18 @@ export default function Header() {
           {/* Dropdown Menu for small and medium screens */}
           {isMenuOpen && (
             <div className="md:hidden mt-4 space-y-2">
-              <h1 className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Home
-              </h1>
-              <h1 className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              </Link>
+              <Link href='/services' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Services
-              </h1>
-              <h1 className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              </Link>
+              <Link href='/about' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 About
-              </h1>
-              <h1 className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              </Link>
+              <Link href='/contact-us' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Contact Us
-              </h1>
+              </Link>
             </div>
           )}
         </div>

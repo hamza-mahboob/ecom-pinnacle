@@ -90,7 +90,7 @@ export default function Home() {
             For Your Business
           </h1>
           <div className="h-[8px] w-[120px] lg:w-[195px] bg-secondaryColor -mt-2 mb-[27px] ml-[188px] md:ml-[400px] lg:ml-[41rem]"></div>
-          <div className="md:ml-72 mt-20 lg:mt-6 max-w-full lg:w-full">
+          <div className="md:ml-72 mt-20 lg:mt-6 max-w-full">
             <MyCarousel
               images={[
                 {
@@ -99,7 +99,7 @@ export default function Home() {
                   width: 1000,
                   height: 700,
                   myClass: "w-full",
-                  basis: "lg:basis-2/6 md:basis-4/5 basis-11/12",
+                  basis: "lg:basis-5/12 md:basis-4/5 basis-11/12",
                 },
                 {
                   src: c1p1,
@@ -190,7 +190,7 @@ export default function Home() {
                   width: 1000,
                   height: 700,
                   myClass: "w-full",
-                  basis: "lg:basis-2/6 md:basis-5/6 basis-11/12",
+                  basis: "lg:basis-4/12 md:basis-5/6 basis-11/12",
                 },
                 {
                   src: c1p1,
