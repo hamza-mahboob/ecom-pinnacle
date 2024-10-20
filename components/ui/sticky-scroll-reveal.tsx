@@ -47,7 +47,7 @@ export const StickyScroll = ({
   // Duller background colors for better contrast
   const backgroundColors = [
     "var(--gray-100)",
-    "#48466c",
+    // "#48466c",
   ];
   const linearGradients = [
     "linear-gradient(to bottom right, #0A074F, #D48F26)", // Duller gradient
@@ -83,7 +83,7 @@ export const StickyScroll = ({
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
                 className={`text-xl sm:text-2xl lg:text-3xl font-bold ${
-                  activeCard % 2 === 0 ? 'text-gray-900' : 'text-gray-50'}`}
+                  activeCard % 2 === 0 ? 'text-gray-900' : 'text-gray-900'}`}
               >
                 {item.title}
               </motion.h2>
@@ -95,7 +95,7 @@ export const StickyScroll = ({
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
                 className={`text-md sm:text-lg lg:text-xl ${
-                  activeCard % 2 === 0 ? 'text-gray-800' : 'text-gray-100'} mt-5 sm:mt-10`}
+                  activeCard % 2 === 0 ? 'text-gray-800' : 'text-gray-800'} mt-5 sm:mt-10`}
               >
                 {item.description}
               </motion.p>
