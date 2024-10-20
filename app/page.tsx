@@ -296,6 +296,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* CTA Section 2 with background image */}
       <section
         className="flex flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-5 md:mx-auto my-[120px] justify-between px-5 rounded-3xl"
