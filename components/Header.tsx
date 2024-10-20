@@ -8,9 +8,14 @@ import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen);
   };
 
   return (
@@ -39,13 +44,31 @@ export default function Header() {
             </div>
 
             {/* Navigation links - hidden on small screens, visible on medium and above */}
-            <div className="hidden md:flex gap-10">
+            <div className="hidden md:flex gap-10 items-center">
               <Link href='/' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Home
               </Link>
-              <Link href='/services' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
-                Services
-              </Link>
+              <div className="relative">
+                <button 
+                  className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline"
+                  onClick={toggleServices}
+                >
+                  Services
+                </button>
+                {isServicesOpen && (
+                  <div className="absolute left-0 mt-2 bg-white shadow-md rounded-md z-20 w-40">
+                    <Link href='/services/amazon' className="block px-4 py-2 text-textColor hover:bg-gray-100">
+                      Amazon
+                    </Link>
+                    <Link href='/services/shopify' className="block px-4 py-2 text-textColor hover:bg-gray-100">
+                      Shopify
+                    </Link>
+                    <Link href='/services/tiktok' className="block px-4 py-2 text-textColor hover:bg-gray-100">
+                      TikTok
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link href='/about' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 About
               </Link>
@@ -66,9 +89,27 @@ export default function Header() {
               <Link href='/' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 Home
               </Link>
-              <Link href='/services' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
-                Services
-              </Link>
+              <div className="block">
+                <button 
+                  className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline"
+                  onClick={toggleServices}
+                >
+                  Services
+                </button>
+                {isServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <Link href='/services/amazon' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+                      Amazon
+                    </Link>
+                    <Link href='/services/shopify' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+                      Shopify
+                    </Link>
+                    <Link href='/services/tiktok' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+                      TikTok
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link href='/about' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
                 About
               </Link>
