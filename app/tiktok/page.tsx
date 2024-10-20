@@ -6,8 +6,21 @@ import timelineImg1 from '../public/imgs/planning pic 1.jpg'
 import timelineImg2 from '../public/imgs/planning pic 2.jpg'
 import timelineImg3 from '../public/imgs/planning pic 3.jpg'
 import timelineImg4 from '../public/imgs/planning pic 4.jpg'
+import tiktokLogo from '../public/imgs/t1.svg'
+import tiktokLogo2 from '../public/imgs/t2.svg'
+import tiktokLogo3 from '../public/imgs/t3.svg'
+import tiktokLogo4 from '../public/imgs/t4.svg'
+import tiktokLogo5 from '../public/imgs/t5.svg'
+import tiktokLogo6 from '../public/imgs/t6.svg'
+import tiktokLogo7 from '../public/imgs/t7.svg'
+import tiktokLogo8 from '../public/imgs/t8.svg'
+import blur from '../public/imgs/Blur.svg'
+import chart from '../public/imgs/chart-column-grow.webp.svg'
+import returns from '../public/imgs/investment-returns.webp.svg'
+import ctaImg2 from "../public/imgs/CTA-Banner-2.png";
 import { Timeline } from '@/components/ui/timeline'
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal'
+import Testimonial from '@/components/Testimonial'
 
 
 export default function page() {
@@ -182,13 +195,13 @@ export default function page() {
     ];
     const content = [
         {
-            title: "Collaborative Editing",
+            title: "TikTok Shop Account Setup",
             description:
-                "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+                "Get your TikTok Shop up and running with our comprehensive account setup service. We handle from initial registration to profile optimization, ensuring your shop is ready for action. Our team ensures your account is configured correctly, optimizing it for visibility and seamless user experience.",
             content: (
                 <div className="h-full w-full flex items-center justify-center text-white">
                     <Image
-                        src={img}
+                        src={tiktokLogo}
                         width={440}
                         height={440}
                         className="h-full w-full object-cover opacity-90"
@@ -198,13 +211,13 @@ export default function page() {
             ),
         },
         {
-            title: "Real time changes",
+            title: "Product Listing and Management",
             description:
-                "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+                "Keep your product catalog organized and up-to-date with our product listing and management service. We assist you in uploading products, writing compelling descriptions, and managing inventory. Our service ensures your listings are attractive and informative, helping to convert viewers into buyers.",
             content: (
                 <div className="h-full w-full flex items-center justify-center text-white">
                     <Image
-                        src={timelineImg1}
+                        src={tiktokLogo2}
                         width={440}
                         height={440}
                         className="h-full w-full object-cover opacity-90"
@@ -214,13 +227,13 @@ export default function page() {
             ),
         },
         {
-            title: "Version control",
+            title: "Creative Content Production",
             description:
-                "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+                "Stand out on TikTok with high-quality, engaging content. Our creative team produces videos that capture attention, showcase your products, and drive conversions. We use the latest trends and innovative techniques to create content that resonates with your target audience.",
             content: (
                 <div className="h-full w-full flex items-center justify-center text-white">
                     <Image
-                        src={timelineImg2}
+                        src={tiktokLogo3}
                         width={440}
                         height={440}
                         className="h-full w-full object-cover opacity-90"
@@ -230,13 +243,77 @@ export default function page() {
             ),
         },
         {
-            title: "Running out of content",
+            title: "Influencer Collaboration",
             description:
-                "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+                "Leverage the power of TikTok influencers to reach a wider audience. We connect you with influencers who align with your brand and manage collaborations to boost your shop's visibility. Our network of influencers ensures that your products are promoted authentically and effectively.",
             content: (
                 <div className="h-full w-full flex items-center justify-center text-white">
                     <Image
-                        src={timelineImg3}
+                        src={tiktokLogo4}
+                        width={440}
+                        height={440}
+                        className="h-full w-full object-cover opacity-90"
+                        alt="linear board demo"
+                    />
+                </div>
+            ),
+        },
+        {
+            title: "Ad Campaign Management",
+            description:
+                "Maximize your advertising budget with our expert ad campaign management. We create and manage TikTok ads that target the right audience, driving traffic and sales to your shop. Our data-driven approach ensures that your ads perform optimally, delivering the best possible ROI.",
+            content: (
+                <div className="h-full w-full flex items-center justify-center text-white">
+                    <Image
+                        src={tiktokLogo5}
+                        width={440}
+                        height={440}
+                        className="h-full w-full object-cover opacity-90"
+                        alt="linear board demo"
+                    />
+                </div>
+            ),
+        },
+        {
+            title: "Performance Analysis and Reporting",
+            description:
+                "Stay informed with detailed performance analysis and reporting. We provide insights into your shop's performance, helping you make informed decisions to improve your results continuously. Our reports are easy to understand and actionable, ensuring you can track your success effectively.",
+            content: (
+                <div className="h-full w-full flex items-center justify-center text-white">
+                    <Image
+                        src={tiktokLogo6}
+                        width={440}
+                        height={440}
+                        className="h-full w-full object-cover opacity-90"
+                        alt="linear board demo"
+                    />
+                </div>
+            ),
+        },
+        {
+            title: "Customer Engagement and Support",
+            description:
+                "Enhance your customer relationships with our customer engagement and support services. We help you manage interactions with customers, respond to inquiries promptly, and provide excellent customer service. Our goal is to build a loyal customer base and increase repeat sales.",
+            content: (
+                <div className="h-full w-full flex items-center justify-center text-white">
+                    <Image
+                        src={tiktokLogo7}
+                        width={440}
+                        height={440}
+                        className="h-full w-full object-cover opacity-90"
+                        alt="linear board demo"
+                    />
+                </div>
+            ),
+        },
+        {
+            title: "Sales and Promotions Strategy",
+            description:
+                "Boost your sales with effective promotional strategies. We develop and implement sales campaigns, discounts, and special offers tailored to your business goals. Our strategies are designed to attract new customers and encourage existing customers to make repeat purchases.",
+            content: (
+                <div className="h-full w-full flex items-center justify-center text-white">
+                    <Image
+                        src={tiktokLogo8}
                         width={440}
                         height={440}
                         className="h-full w-full object-cover opacity-90"
@@ -276,8 +353,58 @@ export default function page() {
                 </div>
                 <Timeline data={data} />
                 <StickyScroll content={content} />
-
             </section>
+
+            {/* CTA Section 2 with background image */}
+            <section
+                className="flex flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-5 md:mx-auto my-[120px] justify-between px-5 rounded-3xl"
+                style={{
+                    backgroundImage: `url(${ctaImg2.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+            >
+                <div className="flex flex-col items-center">
+                    <h1 className="md:text-[30px] lg:text-[42px] font-semibold text-center mt-28">
+                        JOIN THE THRIVING ECOMMERCE ECOSYSTEM AND ACCESS LIMITLESS
+                        OPPORTUNITIES
+                    </h1>
+                    <p>Connect with Our Experienced Advisors Today!</p>
+                    <Button className="rounded-3xl px-auto py-4 w-56 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
+                        Book a Free Consultation
+                    </Button>
+                </div>
+            </section>
+
+            <section className='my-20'>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 place-items-center w-full bg-secondaryColor px-20 min-h-[22rem] py-10">
+                    <div className='flex flex-col gap-5 lg:w-7/12'>
+                        <Image src={blur} alt='dollar symbol' className='h-[4rem] w-[4rem]' />
+                        <h1 className='text-2xl font-medium'>Effortless Passive Income</h1>
+                        <h2 className='font-normal'>Say goodbye to the hassles of traditional
+                            income streams and embrace a lifestyle
+                            where your money works for you.</h2>
+                    </div>
+                    <div className='flex flex-col gap-5 lg:w-7/12'>
+                        <Image src={returns} alt='dollar symbol' className='h-[4rem] w-[4rem]' />
+
+                        <h1 className='text-2xl font-medium'>Best Return on Investment</h1>
+                        <h2 className='font-normal'>At Ecom Experts, we believe in maximizing
+                            your gains with strategic and calculated
+                            investments.</h2>
+                    </div>
+                    <div className='flex flex-col gap-5 lg:w-7/12'>
+                        <Image src={chart} alt='dollar symbol' className='h-[4rem] w-[4rem]' />
+                        <h1 className='text-2xl font-medium'>99.99% Success</h1>
+                        <h2 className='font-normal'>Our proven strategies and unwavering
+                            commitment set the stage for guaranteed
+                            success.</h2>
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonial */}
+            <Testimonial />
         </>
     )
 }
