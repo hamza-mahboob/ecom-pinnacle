@@ -176,16 +176,12 @@ export default function ContactUsForm() {
           )}
         />
         <div className="flex items-center justify-center">
-          {loading ? (
-            <FadeLoader /> // Show loader when loading
-          ) : (
-            <Button
-              className="flex items-center justify-center w-[193px] h-[61px] bg-primaryColor text-white text-[18px] rounded-2xl"
-              type="submit"
-            >
-              Submit
-            </Button>
-          )}
+          <Button
+            className="flex items-center justify-center w-[193px] h-[61px] bg-primaryColor text-white text-[18px] rounded-2xl"
+            type="submit"
+          >
+            {loading ? <FadeLoader /> : "Submit"}
+          </Button>
         </div>
       </form>
     </Form>

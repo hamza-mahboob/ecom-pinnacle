@@ -13,11 +13,11 @@ const LINKS = [
   },
   {
     title: "Contact",
-    items: ["(+62)893912392190", "agencycr@gmail.com"],
+    items: ["+447857153351", "agencycr@gmail.com"],
   },
   {
     title: "Location",
-    items: ["Ecom Pinncale", "Great Portland Street", "W1W4RQ, New York", "team@ecompinnacle.com"],
+    items: ["Office 231", "85 Dunstall Hill", "Wolverhampton, England", "WV6 0SR"],
   },
 ];
 
