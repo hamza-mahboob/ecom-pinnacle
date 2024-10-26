@@ -2,16 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
 import ourValuesBg from "../app/public/imgs/ourValuesBg.png";
 import iconBox from "../app/public/imgs/Icon-Box.png";
+import NumberTicker from "@/components/ui/number-ticker";
+
 
 export default function OurValues() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5, // Trigger when half of the section is visible
-  });
 
   return (
     <section
@@ -22,7 +18,8 @@ export default function OurValues() {
         backgroundPosition: "center",
       }}
     >
-      <div className="container mx-auto relative z-10" ref={ref}>
+      <div className="container mx-auto relative z-10">
+
         <div className="flex flex-col lg:flex-row items-center lg:justify-around py-[96px]">
           <div className="flex flex-col mb-28 lg:mb-0 gap-32 text-center lg:text-start">
             <div className="w-full lg:w-[560px] ">
@@ -38,41 +35,22 @@ export default function OurValues() {
             <div className="flex flex-col md:flex-row mx-auto lg:mx-0 gap-24">
               <div className="flex flex-col gap-2">
                 <h1 className="text-5xl font-semibold">
-                  {inView ? (
-                    <CountUp
-                    start={0}
-                    end={7}
-                    decimals={0}
-                    duration={4}
-                    separator=","
-                    suffix="M +"
-                  />
-                  ) : (
-                    "0"
-                  )}
+                <NumberTicker value={7} decimalPlaces={0} />
+                  M+
                 </h1>
                 <p>Monthly Visits</p>
               </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-5xl font-semibold">
-                  {inView ? <CountUp end={12} duration={4} suffix="+" /> : "0"}
+                <NumberTicker value={12} decimalPlaces={0} />
+                +
                 </h1>
                 <p>Languages</p>
               </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-5xl font-semibold">
-                  {inView ? (
-                    <CountUp
-                      start={0}
-                      end={3.1}
-                      decimals={1}
-                      duration={4}
-                      separator=","
-                      suffix=" M"
-                    />
-                  ) : (
-                    "0"
-                  )}
+                <NumberTicker value={3.1} decimalPlaces={1} />
+                M
                 </h1>
                 <p>Social Followers</p>
               </div>
