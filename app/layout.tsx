@@ -3,7 +3,8 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { ThemeProvider } from "./MTailwind";
-import { roboto, mr } from '@/components/ui/fonts'
+import { roboto, mr } from "@/components/ui/fonts";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,12 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto.className} antialiased`}
-      >
+      <body className={`${roboto.className} antialiased`}>
         <ThemeProvider>
           <Header />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>
