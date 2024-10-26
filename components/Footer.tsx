@@ -1,23 +1,49 @@
 import Image from "next/image";
 import logo from '../app/public/imgs/bawlogo.png'
+import Link from 'next/link';
 
 
-const LINKS = [
+type LinkItem = {
+  name: string;
+  path?: string; // Optional path for items that are actual links
+};
+
+type LinkSection = {
+  title: string;
+  items: LinkItem[];
+};
+
+const LINKS: LinkSection[] = [
   {
     title: "Terms & Policies",
-    items: ["Terms of Service", "Privacy policy"],
+    items: [
+      { name: "Terms of Service", path: "/terms" },
+      { name: "Privacy policy", path: "/privacy" },
+    ],
   },
   {
     title: "Company",
-    items: ["Home", "About Us", "Contact Us"],
+    items: [
+      { name: "Home", path: "/" },
+      { name: "About Us", path: "/about" },
+      { name: "Contact Us", path: "/contact" },
+    ],
   },
   {
     title: "Contact",
-    items: ["+447857153351", "agencycr@gmail.com"],
+    items: [
+      { name: "+447857153351" }, // No path for non-link items
+      { name: "agencycr@gmail.com" },
+    ],
   },
   {
     title: "Location",
-    items: ["Office 231", "85 Dunstall Hill", "Wolverhampton, England", "WV6 0SR"],
+    items: [
+      { name: "Office 231" },
+      { name: "85 Dunstall Hill" },
+      { name: "Wolverhampton, England" },
+      { name: "WV6 0SR" },
+    ],
   },
 ];
 
@@ -34,17 +60,20 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-y-10 md:gap-y-0 gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
-                <li
-                  className="mb-3 text-gray-50 font-semibold tracking-wide"
-                >
+                <li className="mb-3 text-gray-50 font-semibold tracking-wide">
                   {title}
                 </li>
-                {items.map((link) => (
-                  <li key={link}>
-                    <h1
-                      className="py-1.5 font-light transition-colors text-gray-50 hover:cursor-pointer hover:text-gray-400 break-words">
-                      {link}
-                    </h1>
+                {items.map((item) => (
+                  <li key={item.name} className="py-1.5">
+                    {item.path ? (
+                      <Link href={item.path} className="py-1.5 font-light transition-colors text-gray-50 hover:cursor-pointer hover:text-gray-400 break-words">
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <h1 className=" font-light transition-colors text-gray-50 break-words">
+                        {item.name}
+                      </h1>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -41,10 +41,10 @@ export default function PrivacyPolicy() {
             variety of ways, including, but not limited to, when Users visit our
             Site, subscribe to the newsletter, fill out a form, and in
             connection with other activities, services, features or resources we
-            make available on our Site. Users may be asked for, as appropriate,
+            make available on our Site.Users may be asked for, as appropriate,
             name and surname, email address, phone number, User’s ID in Internet
             messengers (Skype, etc.), name of the company which the User
-            represents, job position in this company, User’s feedback. Users
+            represents, job position in this company, User’s feedback.Users
             may, however, visit our Site anonymously. We will collect personal
             identification information from Users only if they voluntarily
             submit such information to us. Users can always refuse to supply
@@ -196,7 +196,7 @@ export default function PrivacyPolicy() {
             and the Site or administer activities on our behalf, such as sending
             out newsletters or surveys. We may share your information with these
             third parties for those limited purposes provided that you have
-            given us your permission. We reserve the right to provide your
+            given us your permission.We reserve the right to provide your
             personal information inside Our company.
           </p>
           <p>The basic rights of User</p>
@@ -236,10 +236,10 @@ export default function PrivacyPolicy() {
             If We, upon the User’s request, erase information related to the
             User from Our database, We will keep only the information that may
             be necessary for protecting our legitimate interests or for public
-            authorities. If the User requires Us to transfer information related
+            authorities.If the User requires Us to transfer information related
             to the User to another controller, rectify it or provide access to
             it, We may first require further information in order to verify
-            User’s identity. If the User is of the opinion that his/her rights
+            User’s identity.If the User is of the opinion that his/her rights
             related to the protection of information related to the User were
             breached, the User may appeal to Us or submit a complaint to the
             relevant authority for the protection of personal data in the User’s
