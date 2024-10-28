@@ -9,18 +9,13 @@ import {
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image, { StaticImageData } from "next/image"
-import {
-  MinimalCard,
-  MinimalCardDescription,
-  MinimalCardImage,
-  MinimalCardTitle,
-} from "@/components/ui/minimal-card"
+
 
 interface MyCarouselProps {
-  images: { src: string | StaticImageData , alt: string, width?: number, height?: number, myClass?: string, basis?: string, title?: string, description?: string }[]
+  images: { src: StaticImageData, alt: string, width?: number, height?: number, myClass?: string, basis?: string, title: string, description: string }[]
 }
 
-export default function SecondCarousel({ images }: MyCarouselProps) {
+export default function MyCarousel({ images }: MyCarouselProps) {
   const [api, setApi] = React.useState<any>()
 
   const scrollPrev = React.useCallback(() => {
@@ -35,46 +30,20 @@ export default function SecondCarousel({ images }: MyCarouselProps) {
     }
   }, [api])
 
-  const cards = [
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
-  ]
-
   return (
     <div className={`relative`}>
-      <Carousel setApi={setApi} className="">
-        <CarouselContent className="p-1">
+      <Carousel setApi={setApi} className="w-full">
+        <CarouselContent>
           {images.map((card, index) => (
-            <div className="flex flex-col w-[338px] h-[294px] bg-white rounded-xl p-2 gap-6">
-              <Image src={card.src} alt="temp" className="object-contain object-center"/>
-              <div className="flex flex-row justify-between px-2">
-                <h1 className="text-xl text-[#331B3B] font-semibold">Shopify Store</h1>
-                <button className="border border-[#343434] px-4 text-sm rounded-full">View Work</button>
+            <CarouselItem key={index} className="lg:basis-5/12 basis-full">
+              <div className="flex flex-col w-[338px] h-[294px] bg-white rounded-xl p-2 gap-6 justify-center md:-mr-40 ml-3 md:ml-0">
+                <Image src={card.src} alt="temp" className="object-contain object-center" />
+                <div className="flex flex-row justify-between px-2 ">
+                  <h1 className="text-xl text-[#331B3B] font-semibold">{card.title}</h1>
+                  <button className="border border-[#343434] px-4 text-sm rounded-full">{card.description}</button>
+                </div>
               </div>
-            </div>
+            </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>

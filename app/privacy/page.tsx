@@ -1,6 +1,6 @@
 import Accordian from "@/components/ui/Accordian";
 import contactUs from "../public/imgs/privacy-policy-hero.png";
-import accordianPic from "../public/imgs/accordianPic.png";
+import accordianPic from "../public/imgs/accordianPic.svg";
 import Image from "next/image";
 
 export default function PrivacyPolicy() {
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
       <section className="w-full">
         <div className="flex flex-col mx-auto w-[320px] md:container gap-5 px-2 md:px-10 lg:px-20">
           <p>
-            This Privacy Policy governs the manner in which Ecom PinnacleLLC
+            This Privacy Policy governs the manner in which Ecom Pinnacle Ltd
             (“Ecom Pinnacle” or “We”) collects, uses, maintains and discloses
             information collected from users (each, a “User”) of the http://Ecom
             Pinnacle.com/ website (“Site”). This privacy policy applies to the

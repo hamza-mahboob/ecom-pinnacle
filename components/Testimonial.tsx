@@ -5,44 +5,57 @@ const reviews = [
   {
     name: "Jack",
     username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    body: "I signed up for YouTube Automation, and it’s been a game-changer! My channel's engagement has doubled, and I barely have to lift a finger. Highly recommend!",
     img: "https://avatar.vercel.sh/jack",
   },
   {
     name: "Jill",
     username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    body: "The Amazon Automation service is top-notch. I've been able to scale my store effortlessly and see consistent profits. Thank you for making this possible!",
     img: "https://avatar.vercel.sh/jill",
   },
   {
     name: "John",
     username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "The Shopify Store setup was smooth and efficient. The team handled everything from design to optimization, and my store looks incredible.",
     img: "https://avatar.vercel.sh/john",
   },
   {
     name: "Jane",
     username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "TikTok Store service was excellent. I was able to tap into new customer bases and saw a clear boost in orders. The team is highly skilled and professional!",
     img: "https://avatar.vercel.sh/jane",
   },
   {
     name: "Jenny",
     username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "Starting my Amazon store was overwhelming, but with their help, I got it set up and running smoothly. Can’t believe the results already!",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
     name: "James",
     username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "I’ve tried other services before, but the YouTube Automation here is unmatched. Consistent views and real growth without the hassle.",
     img: "https://avatar.vercel.sh/james",
   },
+  {
+    name: "Alice",
+    username: "@alice",
+    body: "The Shopify Store setup exceeded my expectations! The design is fantastic, and I’m seeing great traffic and conversions.",
+    img: "https://avatar.vercel.sh/alice",
+  },
+  {
+    name: "Tom",
+    username: "@tom",
+    body: "Their TikTok Store service is spot-on. My product is reaching thousands daily, and it’s paying off! They know their stuff.",
+    img: "https://avatar.vercel.sh/tom",
+  }
 ];
- 
+
+
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
- 
+
 const ReviewCard = ({
   img,
   name,
@@ -77,7 +90,7 @@ const ReviewCard = ({
     </figure>
   );
 };
- 
+
 export default function Testimonial() {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">

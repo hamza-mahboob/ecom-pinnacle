@@ -7,8 +7,9 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import ContactUsForm from "@/components/ContactUsForm";
-import accordianPic from "../public/imgs/accordianPic.png";
+import accordianPic from "../public/imgs/accordianPic.svg";
 import Accordian from "../../components/ui/Accordian";
+import Link from "next/link";
 
 function page() {
   return (
@@ -97,14 +98,14 @@ function page() {
                 </div>
               </div>
             </div>
-            
+
             <ContactUsForm />
           </div>
         </div>
       </section>
 
       {/* Offices */}
-      <section className="w-full my-20 px-5">
+      {/* <section className="w-full my-20 px-5">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row flex-wrap my-20 items-center md:justify-center gap-10">
             <div className="flex flex-col gap-3 md:w-[335px]">
@@ -116,7 +117,7 @@ function page() {
               <div className="flex flex-row gap-2 items-center">
                 <FaLocationDot className="text-secondaryColor" />
                 <p className="text-[14px]">
-                  123 Main St, Suite 500, New York, NY 10001
+                  Office 231, 85 Dunstall Hill, Wolverhampton, England, WV6 0SR
                 </p>
               </div>
               <div className="flex flex-row gap-2 items-center">
@@ -124,45 +125,9 @@ function page() {
                 <p className="text-[14px]">Newyork@lambe.com</p>
               </div>
             </div>
-
-            <div className="flex flex-col gap-3 md:w-[335px]">
-              <h1 className="text-[31px] font-semibold">Australia Office</h1>
-              <p className="text-[#667085] text-[16px]">
-                Velit nulla arcu in nibh lobortis laoreet proin sit. Sed nunc
-                maecenas.
-              </p>
-              <div className="flex flex-row gap-2 items-center">
-                <FaLocationDot className="text-secondaryColor" />
-                <p className="text-[14px]">
-                  333 Collins, Melbourne VIC 3000, Australia
-                </p>
-              </div>
-              <div className="flex flex-row gap-2 items-center">
-                <MdOutlineEmail className="text-secondaryColor" />
-                <p className="text-[14px]">Australia@lambe.com</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-3 md:w-[335px]">
-              <h1 className="text-[31px] font-semibold">Indonesia Office</h1>
-              <p className="text-[#667085] text-[16px]">
-                Velit nulla arcu in nibh lobortis laoreet proin sit. Sed nunc
-                maecenas.
-              </p>
-              <div className="flex flex-row gap-2 items-center">
-                <FaLocationDot className="text-secondaryColor" />
-                <p className="text-[14px]">
-                  Jl. MH Thamrin No.1, Jakarta Pusat 10310
-                </p>
-              </div>
-              <div className="flex flex-row gap-2 items-center">
-                <MdOutlineEmail className="text-secondaryColor" />
-                <p className="text-[14px]">Indonesia@lambe.com</p>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Accordian */}
       <section>
@@ -175,7 +140,10 @@ function page() {
               <Accordian />
             </div>
           </div>
-          <Image src={accordianPic} alt="Accordian Pic" />
+          <div className="flex flex-col gap-5">
+            <Image src={accordianPic} alt="Accordian Pic" />
+            <h3 className=" text-right text-textColor">For More Information <Link className="hover:cursor-pointer hover:underline text-secondaryColor ml-2" href="tel:+447857153351">+447857153351</Link></h3>
+          </div>
         </div>
       </section>
     </>

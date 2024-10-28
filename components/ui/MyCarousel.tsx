@@ -37,7 +37,7 @@ export default function MyCarousel({ images }: MyCarouselProps) {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className={`${images[0].basis}`}>
-              <Card className="max-w-[400px] bg-white rounded-xl p-2">
+              <Card className="max-w-[400px] h-80 bg-white rounded-xl p-2">
                 <CardHeader className="flex gap-3">
                   <Image
                     alt={image.alt}
@@ -51,7 +51,7 @@ export default function MyCarousel({ images }: MyCarouselProps) {
                   <p className="text-2xl font-bold text-[#331B3B]">{image.cardText}</p>
                 </CardBody>
                 <CardFooter>
-                  <h3 className="text-textColor text-xl text-start font-light">
+                  <h3 className="text-textColor text-md text-start font-light">
                     {image.cardBody}
                   </h3>
                 </CardFooter>

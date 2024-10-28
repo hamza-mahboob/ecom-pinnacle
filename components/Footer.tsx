@@ -26,16 +26,17 @@ const LINKS: LinkSection[] = [
     items: [
       { name: "Home", path: "/" },
       { name: "About Us", path: "/about" },
-      { name: "Contact Us", path: "/contact" },
+      { name: "Contact Us", path: "/contact-us" },
     ],
   },
   {
     title: "Contact",
     items: [
-      { name: "+447857153351" }, // No path for non-link items
-      { name: "agencycr@gmail.com" },
+      { name: "+447857153351", path: "tel:+447857153351" }, // Add 'tel:' to make it clickable
+      { name: "info@ecompinnacle.com" },
     ],
   },
+
   {
     title: "Location",
     items: [
@@ -70,7 +71,7 @@ export default function Footer() {
                         {item.name}
                       </Link>
                     ) : (
-                      <h1 className=" font-light transition-colors text-gray-50 break-words">
+                      <h1 className="font-light transition-colors text-gray-50 break-words">
                         {item.name}
                       </h1>
                     )}

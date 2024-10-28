@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../app/public/imgs/Final.png";
 import { Button } from "@/components/ui/button";
@@ -49,7 +49,7 @@ export default function Header() {
                 Home
               </Link>
               <div className="relative">
-                <button 
+                <button
                   className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline"
                   onClick={toggleServices}
                 >
@@ -57,13 +57,13 @@ export default function Header() {
                 </button>
                 {isServicesOpen && (
                   <div className="absolute left-0 mt-2 bg-white shadow-md rounded-md z-20 w-40">
-                    <Link href='/services/amazon' className="block px-4 py-2 text-textColor hover:bg-gray-100">
+                    <Link href='/services/amazon' className="block px-4 py-2 text-textColor hover:bg-gray-100" onClick={toggleServices}>
                       Amazon
                     </Link>
-                    <Link href='/services/shopify' className="block px-4 py-2 text-textColor hover:bg-gray-100">
+                    <Link href='/services/shopify' className="block px-4 py-2 text-textColor hover:bg-gray-100" onClick={toggleServices}>
                       Shopify
                     </Link>
-                    <Link href='/services/tiktok' className="block px-4 py-2 text-textColor hover:bg-gray-100">
+                    <Link href='/services/tiktok' className="block px-4 py-2 text-textColor hover:bg-gray-100" onClick={toggleServices}>
                       TikTok
                     </Link>
                   </div>
@@ -90,7 +90,7 @@ export default function Header() {
                 Home
               </Link>
               <div className="block">
-                <button 
+                <button
                   className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline"
                   onClick={toggleServices}
                 >

@@ -18,7 +18,7 @@ import blogImg1 from '../public/imgs/blog-img-1.png'
 import blogImg2 from '../public/imgs/blog-img-2.png'
 import blogImg3 from '../public/imgs/blog-img-3.png'
 import Accordian from "../../components/ui/Accordian";
-import accordianPic from "../public/imgs/accordianPic.png";
+import accordianPic from "../public/imgs/accordianPic.svg";
 import Testimonial from '@/components/Testimonial'
 
 export default function page() {

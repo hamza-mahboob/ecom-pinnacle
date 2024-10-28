@@ -20,11 +20,12 @@ import gridImg5 from "./public/imgs/gridImg5.png";
 import gridImg6 from "./public/imgs/gridImg6.png";
 import gridImg7 from "./public/imgs/gridImg7.png";
 import gridImg8 from "./public/imgs/gridImg8.png";
-import accordianPic from "./public/imgs/accordianPic.png";
+import accordianPic from "./public/imgs/accordianPic.svg";
 import OurValues from "@/components/OurValues";
 import Testimonial from "@/components/Testimonial";
 import { FaTiktok } from "react-icons/fa";
 import SecondCarousel from "@/components/ui/SecondCarousel";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -46,10 +47,11 @@ export default function Home() {
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book.
               </p>
-
-              <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
-                GET STARTED
-              </Button>
+              <Link href={'/contact-us'}>
+                <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
+                  GET STARTED
+                </Button>
+              </Link>
             </div>
             <Image
               src={hero}
@@ -104,28 +106,28 @@ export default function Home() {
                   src: c1p1,
                   alt: "Carousel Image 1",
                   myClass: "w-full",
-                  basis: "lg:basis-5/12 md:basis-4/5 basis-11/12",
+                  basis: "lg:basis-5/12 basis-full",
                   cardText: "Amazon Automation",
-                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                  cardBody: "From refining product listings to launching impactful advertising campaigns, we ensure your brand excels in a competitive marketplace, driving both growth and success online."
                 },
                 {
                   src: c1p2,
                   alt: "Carousel Image 2",
                   cardText: "Shopify Automation",
-                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                  cardBody: "We simplify your e-commerce journey by purchasing products from a brand or supplier and then selling them on Shopify with an added profit margin."
                 },
                 {
                   src: c1p3,
                   alt: "Carousel Image 3",
 
                   cardText: "TikTok Automation",
-                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                  cardBody: 'We build thriving TikTok shop at your pace, providing tailored support exactly when you need it. Skip the overwhelm, maximize your sales, and conquer the marketplace one step at a time with our "Just-in-Time" approach.'
                 },
                 {
                   src: c1p2,
                   alt: "Carousel Image 4",
                   cardText: "Youtube Automation",
-                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                  cardBody: "Our company provides comprehensive YouTube services to enhance your brand’s visibility. We help you Youtube create engaging content, grow your audience, and drive meaningful connections through impactful video strategies."
                 },
                 // Add more images here
               ]}
@@ -158,10 +160,11 @@ export default function Home() {
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book.
               </p>
-
-              <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
-                EXPLORE MORE
-              </Button>
+              <Link href={'/about'}>
+                <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
+                  EXPLORE MORE
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -173,10 +176,10 @@ export default function Home() {
           <div className="flex container mx-auto">
             <div className="flex flex-col ml-0 items-center md:-ml-20 lg:-ml-40">
               <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-bold leading-[1] mt-[92px]">
-                Our Recent Work
+                Why Work with
               </h1>
               <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-normal leading-[1] z-10">
-                By Our Experts
+                Ecom Pinnacle
               </h1>
               <div className="h-[8px] w-28 lg:w-[155px] bg-secondaryColor -mt-2 mb-[27px] ml-[7rem] lg:ml-[10rem]"></div>
             </div>
@@ -222,27 +225,34 @@ export default function Home() {
               ]}
             /> */}
             <SecondCarousel images={[
-                {
-                  src: c2p1,
-                  alt: "Carousel 2 Image 1",
-                  width: 1000,
-                  title: "Shopify Store",
-                  description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-                },
-                {
-                  src: c2p1,
-                  alt: "Carousel 2 Image 2",
-                  title: "Youtube Automation",
-                  description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-                },
-                {
-                  src: c2p1,
-                  alt: "Carousel 2 Image 3",
-                  title: "Tiktok Shop",
-                  description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-                },
-                // Add more images here
-              ]}/>
+              {
+                src: c2p1,
+                alt: "Carousel 2 Image 1",
+                width: 1000,
+                title: "Shopify Store",
+                description: "View Work"
+              },
+              {
+                src: c2p1,
+                alt: "Carousel 2 Image 2",
+                title: "Youtube Automation",
+                description: "View Work"
+              },
+              {
+                src: c2p1,
+                alt: "Carousel 2 Image 3",
+                title: "Tiktok Shop",
+                description: "View Work"
+              },
+              {
+                src: c2p1,
+                alt: "Carousel 2 Image 4",
+                title: "Amazon Shop",
+                description: "View Work"
+              },
+
+              // Add more images here
+            ]} />
           </div>
         </div>
       </section>
@@ -312,7 +322,7 @@ export default function Home() {
       <Testimonial />
 
       {/* Accordian */}
-      <section>
+      <section className="mt-20">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-20 mx-auto p-5">
           <div className="flex flex-col">
             <h1 className="text-3xl font-semibold mb-10">
