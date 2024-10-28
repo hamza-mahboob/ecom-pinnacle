@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from "react"
-import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -10,9 +9,11 @@ import {
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image, { StaticImageData } from "next/image"
+import { Card, CardHeader, CardBody, CardFooter, Divider, Link } from "@nextui-org/react";
+
 
 interface MyCarouselProps {
-  images: { src: StaticImageData, alt: string, width?: number, height?: number, myClass?: string, basis?: string }[]
+  images: { src: StaticImageData, alt: string, width?: number, height?: number, myClass?: string, basis?: string, cardText: string, cardBody: string }[]
 }
 
 export default function MyCarousel({ images }: MyCarouselProps) {
@@ -36,22 +37,32 @@ export default function MyCarousel({ images }: MyCarouselProps) {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className={`${images[0].basis}`}>
-              <Card>
-                <CardContent className="flex items-center justify-center ring-0 outline-none border-none">
+              <Card className="max-w-[400px] bg-white rounded-xl p-2">
+                <CardHeader className="flex gap-3">
                   <Image
-                    src={image.src}
                     alt={image.alt}
-                    width={image.width || 800}  // Default width 800px
-                    height={image.height || 600}  // Default height 600px
-                    className="object-cover w-full"
+                    height={80}
+                    // radius="sm"
+                    src={image.src}
+                    width={80}
                   />
-                </CardContent>
+                </CardHeader>
+                <Divider />
+                <CardBody>
+                  <p className="text-2xl font-bold text-[#331B3B]">{image.cardText}</p>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                  <h3 className="text-textColor text-xl text-start font-light">
+                    {image.cardBody}
+                  </h3>
+                </CardFooter>
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="absolute -bottom-20 md:bottom-2 right-20 md:-left-40 flex space-x-6">
+      <div className="absolute -bottom-16 md:bottom-2 right-20 md:-left-40 flex space-x-6">
         <Button variant="outline" size="icon" onClick={scrollPrev} className="outline-black outline outline-2 rounded-full h-8 w-8">
           <ChevronLeft className="h-7 w-7 " />
         </Button>

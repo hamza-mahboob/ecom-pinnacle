@@ -7,7 +7,11 @@ import ctaImg from "./public/imgs/CTA-Banner.png";
 import ctaImg2 from "./public/imgs/CTA-Banner-2.png";
 import aboutUs from "./public/imgs/about-us.png";
 import MyCarousel from "../components/ui/MyCarousel";
-import c1p1 from "./public/imgs/c1p1.png";
+import c1p1 from "./public/imgs/c1p1.svg";
+import c1p2 from "./public/imgs/c1p2.svg";
+import c1p3 from "./public/imgs/c1p3.png";
+import c1p4 from "./public/imgs/c1p4.svg";
+import c2p1 from "./public/imgs/c2p1.png";
 import gridImg1 from "./public/imgs/gridImg1.png";
 import gridImg2 from "./public/imgs/gridImg2.png";
 import gridImg3 from "./public/imgs/gridImg3.png";
@@ -19,6 +23,9 @@ import gridImg8 from "./public/imgs/gridImg8.png";
 import accordianPic from "./public/imgs/accordianPic.png";
 import OurValues from "@/components/OurValues";
 import Testimonial from "@/components/Testimonial";
+import { FaTiktok } from "react-icons/fa";
+import SecondCarousel from "@/components/ui/SecondCarousel";
+
 
 export default function Home() {
   return (
@@ -90,34 +97,35 @@ export default function Home() {
             For Your Business
           </h1>
           <div className="h-[8px] w-[120px] lg:w-[195px] bg-secondaryColor -mt-2 mb-[27px] ml-[188px] md:ml-[400px] lg:ml-[41rem]"></div>
-          <div className="md:ml-72 mt-20 lg:mt-6 max-w-full">
+          <div className="md:ml-72 mt-12 lg:mt-6 max-w-full">
             <MyCarousel
               images={[
                 {
                   src: c1p1,
                   alt: "Carousel Image 1",
-                  width: 1000,
-                  height: 700,
                   myClass: "w-full",
                   basis: "lg:basis-5/12 md:basis-4/5 basis-11/12",
+                  cardText: "Amazon Automation",
+                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },
                 {
-                  src: c1p1,
-                  alt: "Carousel Image 1",
-                  width: 1000,
-                  height: 700,
+                  src: c1p2,
+                  alt: "Carousel Image 2",
+                  cardText: "Shopify Automation",
+                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },
                 {
-                  src: c1p1,
-                  alt: "Carousel Image 1",
-                  width: 1000,
-                  height: 700,
+                  src: c1p3,
+                  alt: "Carousel Image 3",
+
+                  cardText: "TikTok Automation",
+                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },
                 {
-                  src: c1p1,
-                  alt: "Carousel Image 1",
-                  width: 1000,
-                  height: 700,
+                  src: c1p2,
+                  alt: "Carousel Image 4",
+                  cardText: "Youtube Automation",
+                  cardBody: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },
                 // Add more images here
               ]}
@@ -181,8 +189,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:ml-56 lg:ml-80 mt-32 max-w-full">
-            <MyCarousel
+          <div className="md:ml-56 lg:ml-80 mt-10 max-w-full">
+            {/* <MyCarousel
               images={[
                 {
                   src: c1p1,
@@ -212,7 +220,31 @@ export default function Home() {
                 },
                 // Add more images here
               ]}
-            />
+            /> */}
+            <SecondCarousel images={[
+                {
+                  src: c2p1,
+                  alt: "Carousel 2 Image 1",
+                  myClass: "w-full",
+                  title: "Shopify Store",
+                  description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                },
+                {
+                  src: c2p1,
+                  alt: "Carousel 2 Image 2",
+                  myClass: "w-full",
+                  title: "Youtube Automation",
+                  description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                },
+                {
+                  src: c2p1,
+                  alt: "Carousel 2 Image 3",
+                  myClass: "w-full",
+                  title: "Tiktok Shop",
+                  description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                },
+                // Add more images here
+              ]}/>
           </div>
         </div>
       </section>

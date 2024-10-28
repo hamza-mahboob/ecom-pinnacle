@@ -8,7 +8,10 @@ import ytLogo from '../public/imgs/ytLogo.png'
 import tiktokLogo from '../public/imgs/TikTokLogo.png'
 import shopifyLogo from '../public/imgs/shopifyLogo.png'
 import OurValues from '@/components/OurValues'
-import placeholderPersonImage from '../public/imgs/placeholderPersonImage.png'
+import ethan from '../public/imgs/ethan.png'
+import olivia from '../public/imgs/olivia.png'
+import emily from '../public/imgs/emily.png'
+import lucas from '../public/imgs/lucas.png'
 import wave from '../public/imgs/wave.png'
 import BlogCard from '@/components/BlogCard'
 import blogImg1 from '../public/imgs/blog-img-1.png'
@@ -102,28 +105,28 @@ export default function page() {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-20 lg:mt-40 place-items-center'>
                     <div>
-                        <Image src={placeholderPersonImage} alt='Main Image' className='rounded-xl object-contain' />
+                        <Image src={olivia} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
                         <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
                             <h3 className='text-titleColor text-2xl'>Olivia Brown</h3>
                             <h4 className='text-textColor text-xs'>Marketing Strategist</h4>
                         </div>
                     </div>
                     <div>
-                        <Image src={placeholderPersonImage} alt='Main Image' className='rounded-xl object-contain' />
+                        <Image src={ethan} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
                         <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
                             <h3 className='text-titleColor text-2xl'>Ethan Clark</h3>
                             <h4 className='text-textColor text-xs'>SEO Specialist</h4>
                         </div>
                     </div>
                     <div>
-                        <Image src={placeholderPersonImage} alt='Main Image' className='rounded-xl object-contain' />
+                        <Image src={emily} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
                         <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
                             <h3 className='text-titleColor text-2xl'>Emily Davis</h3>
                             <h4 className='text-textColor text-xs'>Social Media Manager</h4>
                         </div>
                     </div>
                     <div>
-                        <Image src={placeholderPersonImage} alt='Main Image' className='rounded-xl object-contain' />
+                        <Image src={lucas} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
                         <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
                             <h3 className='text-titleColor text-2xl'>Lucas Evans</h3>
                             <h4 className='text-textColor text-xs'>Content Creator</h4>
