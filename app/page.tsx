@@ -225,21 +225,19 @@ export default function Home() {
                 {
                   src: c2p1,
                   alt: "Carousel 2 Image 1",
-                  myClass: "w-full",
+                  width: 1000,
                   title: "Shopify Store",
                   description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },
                 {
                   src: c2p1,
                   alt: "Carousel 2 Image 2",
-                  myClass: "w-full",
                   title: "Youtube Automation",
                   description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },
                 {
                   src: c2p1,
                   alt: "Carousel 2 Image 3",
-                  myClass: "w-full",
                   title: "Tiktok Shop",
                   description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
                 },

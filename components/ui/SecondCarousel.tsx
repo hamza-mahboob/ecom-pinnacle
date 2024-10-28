@@ -68,8 +68,12 @@ export default function SecondCarousel({ images }: MyCarouselProps) {
       <Carousel setApi={setApi} className="">
         <CarouselContent className="p-1">
           {images.map((card, index) => (
-            <div className="w-[420px] h-[365px] bg-white">
-
+            <div className="flex flex-col w-[338px] h-[294px] bg-white rounded-xl p-2 gap-6">
+              <Image src={card.src} alt="temp" className="object-contain object-center"/>
+              <div className="flex flex-row justify-between px-2">
+                <h1 className="text-xl text-[#331B3B] font-semibold">Shopify Store</h1>
+                <button className="border border-[#343434] px-4 text-sm rounded-full">View Work</button>
+              </div>
             </div>
           ))}
         </CarouselContent>

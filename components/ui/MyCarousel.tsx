@@ -47,11 +47,9 @@ export default function MyCarousel({ images }: MyCarouselProps) {
                     width={80}
                   />
                 </CardHeader>
-                <Divider />
                 <CardBody>
                   <p className="text-2xl font-bold text-[#331B3B]">{image.cardText}</p>
                 </CardBody>
-                <Divider />
                 <CardFooter>
                   <h3 className="text-textColor text-xl text-start font-light">
                     {image.cardBody}
