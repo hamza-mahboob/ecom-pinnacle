@@ -26,6 +26,16 @@ import Testimonial from "@/components/Testimonial";
 import { FaTiktok } from "react-icons/fa";
 import SecondCarousel from "@/components/ui/SecondCarousel";
 import Link from "next/link";
+import { DeviceFrameset } from 'react-device-frameset'
+import 'react-device-frameset/styles/marvel-devices.min.css'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 
 
 export default function Home() {
@@ -315,6 +325,29 @@ export default function Home() {
             <Image src={gridImg7} alt="grid image" />
             <Image src={gridImg8} alt="grid image" />
           </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto my-10">
+        <div className="flex justify-center">
+          <Carousel>
+            <DeviceFrameset device="iPhone 8" color="gold">
+              <CarouselContent>
+                <CarouselItem>
+                  <Image src={gridImg5} alt="grid image" className="w-full object-contain bg-red-500" />
+                </CarouselItem>
+                <CarouselItem><Image src={gridImg6} alt="grid image" /></CarouselItem>
+                <CarouselItem><Image src={gridImg7} alt="grid image" /></CarouselItem>
+                <CarouselItem><Image src={gridImg8} alt="grid image" /></CarouselItem>
+                <CarouselItem><Image src={gridImg5} alt="grid image" /></CarouselItem>
+                <CarouselItem><Image src={gridImg6} alt="grid image" /></CarouselItem>
+                <CarouselItem><Image src={gridImg7} alt="grid image" /></CarouselItem>
+                <CarouselItem><Image src={gridImg8} alt="grid image" /></CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </DeviceFrameset>
+          </Carousel>
         </div>
       </section>
 
