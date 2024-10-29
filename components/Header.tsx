@@ -78,9 +78,11 @@ export default function Header() {
             </div>
 
             {/* Book a Call Button - hidden on small screens */}
-            <Button className="hidden sm:inline-flex rounded-full px-auto py-4 w-32 h-12 bg-primaryColor hover:bg-secondaryColor text-base text-white z-10">
-              Book a Call
-            </Button>
+            <Link href={'/contact-us'} className="z-20">
+              <Button className="hidden sm:inline-flex rounded-full px-auto py-4 w-32 h-12 bg-primaryColor hover:bg-secondaryColor text-base text-white z-10">
+                Book a Call
+              </Button>
+            </Link>
           </div>
 
           {/* Dropdown Menu for small and medium screens */}
