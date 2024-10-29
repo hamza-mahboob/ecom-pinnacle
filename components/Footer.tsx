@@ -33,7 +33,7 @@ const LINKS: LinkSection[] = [
     title: "Contact",
     items: [
       { name: "+447857153351", path: "tel:+447857153351" }, // Add 'tel:' to make it clickable
-      { name: "info@ecompinnacle.com" },
+      { name: "info@ecompinnacle.co.uk" },
     ],
   },
 
