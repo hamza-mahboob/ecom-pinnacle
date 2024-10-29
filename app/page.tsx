@@ -9,7 +9,7 @@ import aboutUs from "./public/imgs/about-us.png";
 import MyCarousel from "../components/ui/MyCarousel";
 import c1p1 from "./public/imgs/c1p1.svg";
 import c1p2 from "./public/imgs/c1p2.svg";
-import c1p3 from "./public/imgs/c1p3.png";
+import c1p3 from "./public/imgs/c1p3.svg";
 import c1p4 from "./public/imgs/c1p4.svg";
 import c2p1 from "./public/imgs/c2p1.png";
 import gridImg1 from "./public/imgs/gridImg1.png";
@@ -124,7 +124,7 @@ export default function Home() {
                   cardBody: 'We build thriving TikTok shop at your pace, providing tailored support exactly when you need it. Skip the overwhelm, maximize your sales, and conquer the marketplace one step at a time with our "Just-in-Time" approach.'
                 },
                 {
-                  src: c1p2,
+                  src: c1p4,
                   alt: "Carousel Image 4",
                   cardText: "Youtube Automation",
                   cardBody: "Our company provides comprehensive YouTube services to enhance your brand’s visibility. We help you Youtube create engaging content, grow your audience, and drive meaningful connections through impactful video strategies."

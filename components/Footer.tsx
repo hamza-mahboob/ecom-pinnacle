@@ -52,11 +52,17 @@ const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-primaryColor">
+    <footer className="relative w-full bg-primaryColor mt-20">
       <div className="mx-auto w-full max-w-[100rem] p-8 pt-32">
-        <div className="flex flex-col lg:flex-row gap-28 justify-center">
-          <div className="mr-20">
-            <Image src={logo} alt="Logo" height={256} width={108} />
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-28 justify-center">
+          <div className="flex flex-col gap-10">
+            <div className="mr-20">
+              <Image src={logo} alt="Logo" height={256} width={108} />
+            </div>
+            <div className="text-white text-2xl font-semibold italic opacity-90">
+              <h2 className="">We handle the <span className="text-secondaryColor">hassle,</span></h2>
+              <h2>so you can enjoy the <span className="text-secondaryColor">results!</span></h2>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-y-10 md:gap-y-0 gap-4">
             {LINKS.map(({ title, items }) => (

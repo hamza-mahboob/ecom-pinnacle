@@ -1,3 +1,4 @@
+'use client'
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -17,6 +18,7 @@ import ctaImg2 from "../../public/imgs/CTA-Banner-2.png";
 import { Timeline } from "@/components/ui/timeline";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Testimonial from "@/components/Testimonial";
+import PricingPage from "@/components/ui/pricing-plans";
 
 export default function page() {
   const data = [
@@ -252,6 +254,53 @@ export default function page() {
       ),
     },
   ];
+  const pricingPlans = [
+    {
+      name: '1 MONTH ESSENTIAL',
+      description: 'A starter package to set up and manage your Amazon Wholesale store with essential tools and support.',
+      monthlyPrice: 1800,
+      link: '/contact-us',
+      features: [
+        'Amazon Seller Central Account Setup',
+        'Product Research (up to 5 products)',
+        'Basic Product Listing Optimization (up to 5 listings)',
+        'Store Launch and Inventory Management (initial setup)',
+        'Ongoing Aftersales Support (limited to 1 month)',
+      ],
+    },
+    {
+      name: '3 MONTHS PLUS',
+      description: 'Enhanced support and resources for building a strong Amazon presence with advanced listing optimization and ongoing management.',
+      monthlyPrice: 2500,
+      link: '/contact-us',
+      features: [
+        'Amazon Seller Central Account Setup',
+        'Marketplace Approvals and Reseller Certificate Acquisition',
+        'Product Research (up to 10 products)',
+        'Advanced Product Listing Optimization (up to 10 listings)',
+        'Pre-Marketing Strategies',
+        'Store Launch, Inventory Management, and Order Fulfillment',
+        'Ongoing Aftersales Support (3 months)',
+      ],
+    },
+    {
+      name: '6 MONTHS PREMIUM',
+      description: 'Comprehensive package offering full-scale support and tailored strategies for successful long-term store management on Amazon.',
+      monthlyPrice: 4500,
+      link: '/contact-us',
+      features: [
+        'Amazon Seller Central Account Setup',
+        'Marketplace Approvals and Reseller Certificate Acquisition',
+        'Comprehensive Product Research (up to 15 products)',
+        'Full Product Listing Optimization (up to 15 listings)',
+        'Tailored Pre-Marketing Strategies',
+        'Store Launch, Inventory Management, and Order Fulfillment',
+        'Ongoing Aftersales Support (6 months)',
+        'Virtual Assistance for Inventory Management (6 months)',
+      ],
+    },
+  ]
+
 
   return (
     <>
@@ -295,6 +344,10 @@ export default function page() {
         </div>
         <Timeline data={data} />
         <StickyScroll content={content} />
+      </section>
+
+      <section className='p-5'>
+        <PricingPage pricingPlans={pricingPlans} />
       </section>
 
       {/* CTA Section 2 with background image */}

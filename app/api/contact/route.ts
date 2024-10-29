@@ -5,6 +5,10 @@ export async function POST(request: Request) {
   try {
     const { fullName, email, company, subject, message } = await request.json();
 
+    //check if pass is null
+    // if (!process.env.EMAIL_PASS)
+    //   return;
+
     // Setup the Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "Gmail", // change this to your preferred email provider

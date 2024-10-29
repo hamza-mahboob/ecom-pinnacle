@@ -49,7 +49,7 @@ function page() {
                       </div>
                       <div className="flex flex-col">
                         <h1 className="font-semibold text-[25px]">Email</h1>
-                        <p>support@ecompinnacle.com</p>
+                        <p>info@ecompinnacle.com</p>
                       </div>
                     </div>
                   </div>

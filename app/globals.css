@@ -31,3 +31,17 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Adjust width here */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #F8A62B; /* Adjust thumb color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0E096B; /* Adjust track color */
+}
+

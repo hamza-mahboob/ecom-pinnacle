@@ -45,6 +45,7 @@ export default function MyCarousel({ images }: MyCarouselProps) {
                     // radius="sm"
                     src={image.src}
                     width={80}
+                     className="w-20 h-20"
                   />
                 </CardHeader>
                 <CardBody>

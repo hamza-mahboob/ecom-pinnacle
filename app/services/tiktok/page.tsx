@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React from 'react'
@@ -21,6 +23,7 @@ import ctaImg2 from "../../public/imgs/CTA-Banner-2.png";
 import { Timeline } from '@/components/ui/timeline'
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal'
 import Testimonial from '@/components/Testimonial'
+import PricingPage from '@/components/ui/pricing-plans'
 
 
 export default function page() {
@@ -323,6 +326,53 @@ export default function page() {
             ),
         },
     ];
+    const pricingPlans = [
+        {
+            name: '1 MONTH ESSENTIAL',
+            description: 'Perfect for beginners looking to establish their TikTok store presence with essential setup and support.',
+            monthlyPrice: 1300,
+            link: '/contact-us',
+            features: [
+                'TikTok Shop Account Setup',
+                'Basic Product Research (up to 5 products)',
+                'Initial Product Listing Optimization (up to 5 listings)',
+                'Store Launch Assistance',
+                'Basic Aftersales Support (1 month)',
+            ],
+        },
+        {
+            name: '3 MONTHS PLUS',
+            description: 'Ideal for sellers who need comprehensive product research and optimized listings to drive their initial sales.',
+            monthlyPrice: 1999,
+            link: '/contact-us',
+            features: [
+                'TikTok Shop Account Setup',
+                'Marketplace Approvals and Reseller Certificate Acquisition',
+                'Product Research (up to 10 products)',
+                'Advance Product Listing Optimization (up to 10 listings)',
+                'Pre-Marketing Strategies for TikTok',
+                'Store Launch and Inventory Management Support',
+                'Aftersales Support (3 months)'
+            ],
+        },
+        {
+            name: '6 MONTHS PREMIUM',
+            description: 'Best for those aiming for a fully optimized store with end-to-end support, marketing assistance, and customer engagement.',
+            monthlyPrice: 4500,
+            link: '/contact-us',
+            features: [
+                'TikTok Shop Account Setup',
+                'Marketplace Approvals and Reseller Certificate Acquisition',
+                'Comprehensive Product Research (up to 15 products)',
+                'Full Product Listing Optimization (up to 15 listings)',
+                'Customized Pre-Marketing Strategies and Content Planning',
+                'Complete Store Launch, Inventory Management, and Order Fulfillment',
+                'Ongoing Aftersales Support (6 months)',
+                'Virtual Assistance for Marketing and Customer Engagement (3 months)'
+            ],
+        },
+    ]
+    
     return (
         <>
             {/* Main section */}
@@ -353,6 +403,10 @@ export default function page() {
                 </div>
                 <Timeline data={data} />
                 <StickyScroll content={content} />
+            </section>
+
+            <section className='p-5'>
+                <PricingPage pricingPlans={pricingPlans} />
             </section>
 
             {/* CTA Section 2 with background image */}

@@ -1,3 +1,4 @@
+'use client'
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -21,6 +22,7 @@ import ctaImg2 from "../../public/imgs/CTA-Banner-2.png";
 import { Timeline } from "@/components/ui/timeline";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Testimonial from "@/components/Testimonial";
+import PricingPage from "@/components/ui/pricing-plans";
 
 export default function page() {
   const data = [
@@ -319,6 +321,58 @@ export default function page() {
       ),
     },
   ];
+  const pricingPlans = [
+    {
+        name: 'SILVER',
+        description: 'Perfect for new entrepreneurs, this package includes 4 weeks of Facebook Ads management and a basic Shopify store setup to kickstart your online journey.',
+        monthlyPrice: 500,
+        link: '/contact-us',
+        features: [
+            'Shopify Store Setup (basic theme)',
+            'Basic Product Research (up to 5 products)',
+            'Initial Product Listing Optimization (up to 5 listings)',
+            'Store Launch Assistance',
+            'Basic Aftersales Support (1 month)',
+        ],
+    },
+    {
+        name: 'GOLD',
+        description: 'A complete solution for serious sellers, including targeted Facebook Ads management, a niche-focused store, and dedicated support to maximize your store’s potential.',
+        monthlyPrice: 1199,
+        link: '/contact-us',
+        features: [
+            '360 Degree Service, Laser targeting',
+            'Have Your Personal Ad Manager',
+            'FREE Niche Store INCLUDED (Value $599)',
+            'Store Ready To Make Sales',
+            'First sale guaranteed',
+        ],
+    },
+    {
+        name: 'LIFE TIME',
+        description: 'Comprehensive lifetime package for established businesses seeking continuous support, advanced Shopify store setup, and an all-inclusive social media and product management strategy.',
+        monthlyPrice: 3800,
+        link: '/contact-us',
+        features: [
+            'Logo Design',
+            'Shopify Store Design',
+            'Shopify Store Development',
+            'Social Media Creation',
+            'Social Media Campaign',
+            'Social Media Posting',
+            'Product Analysis',
+            'Payment Integration',
+            'Profitable Product Niche Research',
+            'Supplier Search and Finalization',
+            'Dropshipping Integration',
+            'Product Hunting',
+            'Order Fulfillment',
+            'Shopify Account Management',
+            'Inventory Management',
+        ],
+    },
+]
+
 
   return (
     <>
@@ -361,6 +415,10 @@ export default function page() {
         </div>
         <Timeline data={data} />
         <StickyScroll content={content} />
+      </section>
+
+      <section className='p-5'>
+        <PricingPage pricingPlans={pricingPlans} />
       </section>
 
       {/* CTA Section 2 with background image */}
