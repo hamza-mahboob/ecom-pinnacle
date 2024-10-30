@@ -84,10 +84,10 @@ export default function Home() {
       src: phonec1p5,
     },
     {
-      src: phonec1p6,  
+      src: phonec1p6,
     },
     {
-      src: phonec1p7,  
+      src: phonec1p7,
     },
     {
       src: phonec1p8,
@@ -105,18 +105,21 @@ export default function Home() {
       <section className="w-full mt-[15px] px-5">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-start">
-            <div className="mt-[120px] w-full lg:w-[530px] order-2 lg:order-1">
+            <div className="mt-[120px] w-full lg:w-[580px] order-2 lg:order-1">
               <h1 className="text-headingColor text-4xl md:text-[87px] font-light leading-[1]">
-                <span className="font-bold">We Help you</span> to grow your
-                <span className="font-light"> Business</span>
+                <span className="font-bold">Ecom pinnacle </span>
+                <span className="font-light">turns business goals into reality</span>
               </h1>
 
-              <div className="h-[12px] w-36 md:w-[22rem] lg:w-[310px] bg-secondaryColor -mt-2 lg:-mt-4 mb-[27px] ml-[136px] md:ml-[190px] lg:ml-0"></div>
+              <div className="h-[12px] w-20 md:w-[39rem] lg:w-[220px] bg-secondaryColor -mt-2 lg:-mt-4 mb-[27px] ml-[136px] md:ml-[50px] lg:ml-0"></div>
 
               <p className="text-headingColor opacity-[66%]">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                Searching for an ecommerce consultant for
+                expert level automation services? ECOM
+                PINNACLE; your single source platform for
+                ecommerce automation. The one place that
+                provides YouTube, TikTok, Shopify, Amazon
+                automation services according to your needs
               </p>
               <Link href={'/contact-us'}>
                 <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
@@ -217,23 +220,21 @@ export default function Home() {
                 About Us
               </h1>
               <h1 className="text-headingColor text-[48px] font-light leading-[1] mb-[22px]">
-                Fake or Real
+                Experience you can rely on
               </h1>
 
               <p className="text-headingColor opacity-[66%] mb-[9px]">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                Our team are professionals with
+                years of e-commerce and digital
+                marketing experience. We know what
+                it’s like to run an online business in
+                the UK and will be with you every
+                step of the way
               </p>
 
-              <p className="text-headingColor opacity-[66%]">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
               <Link href={'/about'}>
                 <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
-                  EXPLORE MORE
+                  Get Free Consultation
                 </Button>
               </Link>
             </div>
@@ -256,9 +257,10 @@ export default function Home() {
             </div>
             <div className="hidden md:flex w-[20rem] lg:w-[32rem] ml-auto items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
               <h3>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                Our expert team brings automation solutions tailored for maximum
+                ROI, backed by a proven track record and skilled professionals. Let
+                us simplify your path to e-commerce growth with impactful, data
+                driven results.
               </h3>
             </div>
           </div>
@@ -378,7 +380,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hidden lg:block container mx-auto my-40">
+      <section className="hidden xl:block container mx-auto my-40">
         <div className="absolute ml-2.5">
           <Carousel items={cards} />
         </div>

@@ -86,7 +86,7 @@ export default function AccordionCustomIcon() {
                     I have never done Dropshipping. Should I try it?
                 </AccordionHeader>
                 <AccordionBody>
-                    We have helped thousands of entrepreneurs to start their online businesses, it is not rocket science, with a little bit of effort and grit anyone can do it!
+                    We have helped hundreds of entrepreneurs to start their online businesses, it is not rocket science, with a little bit of effort and grit anyone can do it!
 
                     All business entails risk as well as massive and consistent effort and action. But taking calculated risks brings in the results.
                 </AccordionBody>
