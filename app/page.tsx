@@ -12,6 +12,14 @@ import c1p2 from "./public/imgs/c1p2.svg";
 import c1p3 from "./public/imgs/c1p3.svg";
 import c1p4 from "./public/imgs/c1p4.svg";
 import c2p1 from "./public/imgs/c2p1.png";
+import phonec1p1 from "./public/imgs/phonec1p1.webp";
+import phonec1p2 from "./public/imgs/phonec1p2.webp";
+import phonec1p3 from "./public/imgs/phonec1p3.jpg";
+import phonec1p4 from "./public/imgs/phonec1p4.webp";
+import phonec1p5 from "./public/imgs/phonec1p5.jpg";
+import phonec1p6 from "./public/imgs/phonec1p6.webp";
+import phonec1p7 from "./public/imgs/phonec1p7.jpg";
+import phonec1p8 from "./public/imgs/phonec1p8.jpg";
 import gridImg1 from "./public/imgs/gridImg1.png";
 import gridImg2 from "./public/imgs/gridImg2.png";
 import gridImg3 from "./public/imgs/gridImg3.png";
@@ -28,17 +36,75 @@ import SecondCarousel from "@/components/ui/SecondCarousel";
 import Link from "next/link";
 import { DeviceFrameset } from 'react-device-frameset'
 import 'react-device-frameset/styles/marvel-devices.min.css'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
 
 export default function Home() {
+  const DummyContent = () => {
+    return (
+      <>
+        {[...new Array(3).fill(1)].map((_, index) => {
+          return (
+            <div
+              key={"dummy-content" + index}
+              className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+            >
+              <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+                <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                  The first rule of Apple club is that you boast about Apple club.
+                </span>{" "}
+                Keep a journal, quickly jot down a grocery list, and take amazing
+                class notes. Want to convert those notes to text? No problem.
+                Langotiya jeetu ka mara hua yaar is ready to capture every
+                thought.
+              </p>
+              <Image
+                src="https://assets.aceternity.com/macbook.png"
+                alt="Macbook mockup from Aceternity UI"
+                height="500"
+                width="500"
+                className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              />
+            </div>
+          );
+        })}
+      </>
+    );
+  };
+
+  const data = [
+    {
+      src: phonec1p1,
+    },
+    {
+      src: phonec1p2,
+    },
+    {
+      src: phonec1p3,
+    },
+    {
+      src: phonec1p4,
+    },
+    {
+      src: phonec1p5,
+    },
+    {
+      src: phonec1p6,  
+    },
+    {
+      src: phonec1p7,  
+    },
+    {
+      src: phonec1p8,
+    },
+  ];
+
+  const cards = data.map((card, index) => (
+    //@ts-ignore
+    <Card key={card.src} card={card} index={index} />
+  )
+  )
+
   return (
     <>
       <section className="w-full mt-[15px] px-5">
@@ -328,31 +394,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto my-10">
-        <div className="flex justify-center">
-          <Carousel>
-            <DeviceFrameset device="iPhone 8" color="gold">
-              <CarouselContent>
-                <CarouselItem>
-                  <Image src={gridImg5} alt="grid image" className="w-full object-contain bg-red-500" />
-                </CarouselItem>
-                <CarouselItem><Image src={gridImg6} alt="grid image" /></CarouselItem>
-                <CarouselItem><Image src={gridImg7} alt="grid image" /></CarouselItem>
-                <CarouselItem><Image src={gridImg8} alt="grid image" /></CarouselItem>
-                <CarouselItem><Image src={gridImg5} alt="grid image" /></CarouselItem>
-                <CarouselItem><Image src={gridImg6} alt="grid image" /></CarouselItem>
-                <CarouselItem><Image src={gridImg7} alt="grid image" /></CarouselItem>
-                <CarouselItem><Image src={gridImg8} alt="grid image" /></CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </DeviceFrameset>
-          </Carousel>
+      <section className="hidden lg:block container mx-auto my-10">
+        <div className="absolute ml-2.5">
+          <Carousel items={cards} />
+        </div>
+        <div className="relative">
+          <DeviceFrameset device="iPhone X" height={750} width={360}>
+          </DeviceFrameset>
         </div>
       </section>
 
       {/* Testimonial */}
-      <Testimonial />
+      <section className="my-40">
+        <Testimonial />
+      </section>
 
       {/* Accordian */}
       <section className="mt-20">

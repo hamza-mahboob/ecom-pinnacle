@@ -6,7 +6,7 @@ import { ThemeProvider } from "./MTailwind";
 import { roboto, mr } from "@/components/ui/fonts";
 import { Toaster } from "@/components/ui/toaster";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ecom Pinnacle - Your Partner for E-commerce Success",
   description: "ECOM PINNACLE; your single source platform for ecommerce automation. The one place that provides YouTube, TikTok, Shopify, and Amazon automation services according to your needs.",
   keywords: [
