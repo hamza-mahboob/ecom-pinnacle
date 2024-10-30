@@ -24,14 +24,9 @@ import gridImg1 from "./public/imgs/gridImg1.png";
 import gridImg2 from "./public/imgs/gridImg2.png";
 import gridImg3 from "./public/imgs/gridImg3.png";
 import gridImg4 from "./public/imgs/gridImg4.png";
-import gridImg5 from "./public/imgs/gridImg5.png";
-import gridImg6 from "./public/imgs/gridImg6.png";
-import gridImg7 from "./public/imgs/gridImg7.png";
-import gridImg8 from "./public/imgs/gridImg8.png";
 import accordianPic from "./public/imgs/accordianPic.svg";
 import OurValues from "@/components/OurValues";
 import Testimonial from "@/components/Testimonial";
-import { FaTiktok } from "react-icons/fa";
 import SecondCarousel from "@/components/ui/SecondCarousel";
 import Link from "next/link";
 import { DeviceFrameset } from 'react-device-frameset'
@@ -380,21 +375,10 @@ export default function Home() {
             <Image src={gridImg3} alt="grid image" />
             <Image src={gridImg4} alt="grid image" />
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 place-items-center w-full p-5 gap-2 mx-auto my-20">
-            <Image src={gridImg5} alt="grid image" />
-            <Image src={gridImg6} alt="grid image" />
-            <Image src={gridImg7} alt="grid image" />
-            <Image src={gridImg8} alt="grid image" />
-            <Image src={gridImg5} alt="grid image" />
-            <Image src={gridImg6} alt="grid image" />
-            <Image src={gridImg7} alt="grid image" />
-            <Image src={gridImg8} alt="grid image" />
-          </div>
         </div>
       </section>
 
-      <section className="hidden lg:block container mx-auto my-10">
+      <section className="hidden lg:block container mx-auto my-40">
         <div className="absolute ml-2.5">
           <Carousel items={cards} />
         </div>
