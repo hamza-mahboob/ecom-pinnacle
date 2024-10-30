@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -256,51 +256,53 @@ export default function page() {
   ];
   const pricingPlans = [
     {
-      name: '1 MONTH ESSENTIAL',
-      description: 'A starter package to set up and manage your Amazon Wholesale store with essential tools and support.',
+      name: "1 MONTH ESSENTIAL",
+      description:
+        "A starter package to set up and manage your Amazon Wholesale store with essential tools and support.",
       monthlyPrice: 1800,
-      link: '/contact-us',
+      link: "/contact-us",
       features: [
-        'Amazon Seller Central Account Setup',
-        'Product Research (up to 5 products)',
-        'Basic Product Listing Optimization (up to 5 listings)',
-        'Store Launch and Inventory Management (initial setup)',
-        'Ongoing Aftersales Support (limited to 1 month)',
+        "Amazon Seller Central Account Setup",
+        "Product Research (up to 5 products)",
+        "Basic Product Listing Optimization (up to 5 listings)",
+        "Store Launch and Inventory Management (initial setup)",
+        "Ongoing Aftersales Support (limited to 1 month)",
       ],
     },
     {
-      name: '3 MONTHS PLUS',
-      description: 'Enhanced support and resources for building a strong Amazon presence with advanced listing optimization and ongoing management.',
+      name: "3 MONTHS PLUS",
+      description:
+        "Enhanced support and resources for building a strong Amazon presence with advanced listing optimization and ongoing management.",
       monthlyPrice: 2500,
-      link: '/contact-us',
+      link: "/contact-us",
       features: [
-        'Amazon Seller Central Account Setup',
-        'Marketplace Approvals and Reseller Certificate Acquisition',
-        'Product Research (up to 10 products)',
-        'Advanced Product Listing Optimization (up to 10 listings)',
-        'Pre-Marketing Strategies',
-        'Store Launch, Inventory Management, and Order Fulfillment',
-        'Ongoing Aftersales Support (3 months)',
+        "Amazon Seller Central Account Setup",
+        "Marketplace Approvals and Reseller Certificate Acquisition",
+        "Product Research (up to 10 products)",
+        "Advanced Product Listing Optimization (up to 10 listings)",
+        "Pre-Marketing Strategies",
+        "Store Launch, Inventory Management, and Order Fulfillment",
+        "Ongoing Aftersales Support (3 months)",
       ],
     },
     {
-      name: '6 MONTHS PREMIUM',
-      description: 'Comprehensive package offering full-scale support and tailored strategies for successful long-term store management on Amazon.',
+      name: "6 MONTHS PREMIUM",
+      description:
+        "Comprehensive package offering full-scale support and tailored strategies for successful long-term store management on Amazon.",
       monthlyPrice: 4500,
-      link: '/contact-us',
+      link: "/contact-us",
       features: [
-        'Amazon Seller Central Account Setup',
-        'Marketplace Approvals and Reseller Certificate Acquisition',
-        'Comprehensive Product Research (up to 15 products)',
-        'Full Product Listing Optimization (up to 15 listings)',
-        'Tailored Pre-Marketing Strategies',
-        'Store Launch, Inventory Management, and Order Fulfillment',
-        'Ongoing Aftersales Support (6 months)',
-        'Virtual Assistance for Inventory Management (6 months)',
+        "Amazon Seller Central Account Setup",
+        "Marketplace Approvals and Reseller Certificate Acquisition",
+        "Comprehensive Product Research (up to 15 products)",
+        "Full Product Listing Optimization (up to 15 listings)",
+        "Tailored Pre-Marketing Strategies",
+        "Store Launch, Inventory Management, and Order Fulfillment",
+        "Ongoing Aftersales Support (6 months)",
+        "Virtual Assistance for Inventory Management (6 months)",
       ],
     },
-  ]
-
+  ];
 
   return (
     <>
@@ -314,12 +316,12 @@ export default function page() {
             Amazon Automation
           </h1>
           <h3 className="text-textColor">
-            Ecompinnacle provides comprehensive solutions to help businesses
-            like yours thrive on TikTok Shop. We assist you in leveraging the
-            immense potential of this booming platform and connecting with a
-            highly engaged audience. Our data-driven strategies and expert
-            guidance ensure a seamless journey to achieving your eCommerce goals
-            on TikTok Shop.
+            Take it to the next level with our Amazon marketing services. ECOM
+            PINNACLE does all the work-from store creation to order management.
+            <br />
+            <br />
+            Take it to the next level with our Amazon marketing services.ECOM
+            PINNACLE does all the work-from store creation to order management.
           </h3>
           <Button className="rounded-full px-32 lg:px-40 py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
             Book a Free Consultation
@@ -346,7 +348,7 @@ export default function page() {
         <StickyScroll content={content} />
       </section>
 
-      <section className='p-5'>
+      <section className="p-5">
         <PricingPage pricingPlans={pricingPlans} />
       </section>
 

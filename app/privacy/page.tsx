@@ -22,105 +22,46 @@ export default function PrivacyPolicy() {
         <div className="flex flex-col mx-auto w-[320px] md:container gap-5 px-2 md:px-10 lg:px-20">
           <p>
             This Privacy Policy governs the manner in which Ecom Pinnacle Ltd
-            (“Ecom Pinnacle” or “We”) collects, uses, maintains and discloses
+            (“Ecom Pinnacle” or “We”) collects, uses, maintains, and discloses
             information collected from users (each, a “User”) of the http://EcomPinnacle.com/ website
             (“Site”). This privacy policy applies to the Site and all products
             and services offered by Ecom Pinnacle. For more details about Us,
             see Section “Contacting us”.
           </p>
 
-          <h1 className="text-3xl font-semibold">What information we collect?</h1>
-          <p>We collect and process the following information:</p>
-
-          <h2 className="text-2xl font-semibold">(a) Personal identification information</h2>
+          <h1 className="text-3xl font-semibold">Personal Data Collection & Usage</h1>
           <p>
-            We may collect personal identification information from Users in a
-            variety of ways, including when Users visit our Site, subscribe to
-            the newsletter, fill out a form, and in connection with other
-            activities, services, features, or resources we make available on
-            our Site. Users may be asked for, as appropriate, name and surname,
-            email address, phone number, User’s ID in Internet messengers
-            (Skype, etc.), name of the company which the User represents, job
-            position in this company, User’s feedback. Users may visit our Site
-            anonymously. We will collect personal identification information
-            from Users only if they voluntarily submit such information to us.
-            Users can always refuse to supply personal information, except that
-            it may prevent them from engaging in certain Site-related
-            activities.
+            Payment to Ecom Pinnacle is non-refundable in case of suspension or closing of the business. We collect anonymous general data from clients, including IP-based locations, viewed content, and purchases to target the audience and enhance their experience. Your personal information and sensitive data are kept confidential and stored securely.
           </p>
 
-          <h2 className="text-2xl font-semibold">(b) Non-personal identification information</h2>
+          <h1 className="text-3xl font-semibold">Types of Information We Handle</h1>
+          <h2 className="text-2xl font-semibold">(1) Personal Information (PII)</h2>
           <p>
-            We may collect non-personal identification information about Users
-            whenever they interact with our Site. Non-personal identification
-            information may include the browser name, the type of computer, and
-            technical information about Users' means of connection to our Site,
-            such as the operating system and the Internet service providers
-            utilized.
+            The personal information will be kept confidential without sharing, selling, or renting.
+          </p>
+          <h2 className="text-2xl font-semibold">(2) Non-Personal Information (NPI)</h2>
+          <p>
+            To enhance the services, clicks, purchases, and views will be monitored.
           </p>
 
-          <h2 className="text-2xl font-semibold">(c) Web browser cookies</h2>
+          <h1 className="text-3xl font-semibold">How We Use Your Data</h1>
           <p>
-            Our Site may use “cookies” to enhance User experience. User’s web
-            browser places cookies on their hard drive for record-keeping
-            purposes and sometimes to track information about them. Users may
-            choose to set their web browser to refuse cookies or alert when
-            cookies are being sent. Note that some parts of the Site may not
-            function properly if cookies are disabled.
+            The collected data is used for updating the services for a better client experience, including notifications for regular updates and promotions for efficient automation.
           </p>
 
-          <h1 className="text-3xl font-semibold">What are the legal bases for processing information?</h1>
-          <p>We process information on the following legal bases:</p>
-          <ul>
-            (a) Personal identification information:
-            <ul className="list-disc ml-5">
-              <li>User’s consent when User agrees to send personal information</li>
-              <li>
-                Our legitimate interest in offering services, negotiating, and
-                fulfilling contracts with the User or the company they
-                represent.
-              </li>
-            </ul>
-          </ul>
-          <ul>
-            (b) Non-personal identification information and cookies:
-            <ul className="list-disc ml-5">
-              <li>User’s consent</li>
-              <li>Our legitimate interest in proper administration of our site.</li>
-            </ul>
-          </ul>
-
-          <h1 className="text-3xl font-semibold">How we use collected information?</h1>
-          <ul>
-            Ecom Pinnacle may use Users' personal information for purposes such as:
-            <ul className="list-disc ml-5">
-              <li>Offering our services and products to the User or their company</li>
-              <li>Fulfilling legal obligations based on agreements</li>
-              <li>Personalizing User experience and responding to inquiries</li>
-              <li>
-                Sending emails, newsletters, or updates, provided the User has
-                opted in to receive them.
-              </li>
-              <li>For any other legitimate business purposes.</li>
-            </ul>
-          </ul>
-
-          <h1 className="text-3xl font-semibold">Data storage duration</h1>
-          <ul>
-            We store data within the following terms:
-            <ul className="list-disc ml-5">
-              <li>
-                Personal data: 10 years after the last inquiry or contract termination
-              </li>
-              <li>Non-personal data and cookies: 1 year after collection</li>
-            </ul>
-          </ul>
-
-          <h1 className="text-3xl font-semibold">Data protection</h1>
+          <h1 className="text-3xl font-semibold">Data Sharing & Security</h1>
           <p>
-            We implement data collection, storage, processing practices, and
-            security measures to protect against unauthorized access,
-            alteration, or destruction of your information.
+            We have secure servers protecting your data and payment information. All data is kept strictly confidential, except when legally required or with your permission.
+          </p>
+
+          <h1 className="text-3xl font-semibold">Cookies</h1>
+          <p>
+            Cookies are stored to enable personalized advertising. You can rule out this anonymous data.
+          </p>
+
+          <h1 className="text-3xl font-semibold">Data Protection</h1>
+          <p>
+            We implement data collection, storage, processing practices, and security measures to protect against unauthorized access, alteration, or destruction of your information.
           </p>
 
           <p className="font-semibold my-10">Last updated: 24.10.2024</p>

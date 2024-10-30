@@ -12,6 +12,8 @@ import c1p2 from "./public/imgs/c1p2.svg";
 import c1p3 from "./public/imgs/c1p3.svg";
 import c1p4 from "./public/imgs/c1p4.svg";
 import c2p1 from "./public/imgs/c2p1.png";
+import c2p2 from "./public/imgs/youtube-automation-carousel-pic.webp";
+import c2p4 from "./public/imgs/amazon-automation-carousel-pic-2.webp";
 import phonec1p1 from "./public/imgs/phonec1p1.webp";
 import phonec1p2 from "./public/imgs/phonec1p2.webp";
 import phonec1p3 from "./public/imgs/phonec1p3.jpg";
@@ -306,7 +308,7 @@ export default function Home() {
                 description: "View Work"
               },
               {
-                src: c2p1,
+                src: c2p2,
                 alt: "Carousel 2 Image 2",
                 title: "Youtube Automation",
                 description: "View Work"
@@ -318,9 +320,9 @@ export default function Home() {
                 description: "View Work"
               },
               {
-                src: c2p1,
+                src: c2p4,
                 alt: "Carousel 2 Image 4",
-                title: "Amazon Shop",
+                title: "Amazon Automation",
                 description: "View Work"
               },
 

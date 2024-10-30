@@ -26,15 +26,15 @@ export default function page() {
         <>
             {/* Main section */}
             <section className='container flex flex-col lg:flex-row mx-auto my-20 gap-20 justify-center items-center'>
-                <div className='w-[32rem] lg:w-[35rem] text-titleColor p-3 text-center lg:text-start'>
-                    <h1 className='flex flex-col md:flex-row text-5xl font-semibold leading-relaxed lg:leading-loose'>Helping Millions Grow Better Since 2010</h1>
-                    <h3 className='text-textColor'>Et et id laoreet ultricies elementum venenatis ornare. Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus quis egestas tincidunt neque ut accumsan.</h3>
+                <div className='flex flex-col items-center md:w-[35rem] text-titleColor p-3 text-center lg:text-start gap-5 '>
+                    <h1 className='flex flex-col md:flex-row text-3xl w-[340px] md:w-full md:text-5xl font-semibold leading-relaxed md:leading-relaxed'>Helping Millions Grow Better Since 2010</h1>
+                    <h3 className='text-textColor w-[340px] md:w-full'>Et et id laoreet ultricies elementum venenatis ornare. Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus quis egestas tincidunt neque ut accumsan.</h3>
                     <Button className="rounded-xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
                         Book a Call
                     </Button>
                 </div>
                 <div className='p-3 lg:p-0'>
-                    <Image src={img} alt='Main Image' className='rounded-xl' width={540} height={389} />
+                    <Image src={img} alt='Main Image' className='rounded-xl w-[350px] md:w-[540px]' width={540} height={389} />
                 </div>
             </section>
 
@@ -136,9 +136,9 @@ export default function page() {
             </section>
 
             {/* affordable price for everyone  */}
-            <section className="bg-primaryColor text-white py-40 my-20">
+            {/* <section className="bg-primaryColor text-white py-40 my-20">
                 <div className="max-w-[85rem] w-8/12 mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 text-center lg:text-start">
-                    {/* Left Section */}
+                    
                     <div className="space-y-6 lg:pr-8 border-b lg:border-b-0 lg:border-r-2 border-[#4A1FB8] pb-8 lg:pb-0">
                         <h2 className="text-4xl md:text-5xl font-bold lg:leading-relaxed text-center lg:text-start">
                             Affordable Pricing for Everyone
@@ -161,7 +161,6 @@ export default function page() {
                         </div>
                     </div>
 
-                    {/* Right Section */}
                     <div className="lg:pl-8 flex flex-col justify-center lg:w-[28rem] text-center lg:text-start">
                         <div className="border-b border-[#4A1FB8] lg:pl-8 pb-5">
                             <p className="text-xs font-light">Starts at</p>
@@ -176,7 +175,7 @@ export default function page() {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Accordian */}
             <section className='my-20'>
