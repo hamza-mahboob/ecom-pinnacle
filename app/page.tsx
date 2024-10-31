@@ -206,7 +206,7 @@ export default function Home() {
                     "We simplify your e-commerce journey by purchasing products from a brand or supplier and then selling them on Shopify with an added profit margin.",
                 },
                 {
-                  src: c1p3,
+                  src: c1p4,
                   alt: "Carousel Image 3",
 
                   cardText: "TikTok Automation",
@@ -214,7 +214,7 @@ export default function Home() {
                     'We build thriving TikTok shop at your pace, providing tailored support exactly when you need it. Skip the overwhelm, maximize your sales, and conquer the marketplace one step at a time with our "Just-in-Time" approach.',
                 },
                 {
-                  src: c1p4,
+                  src: c1p3,
                   alt: "Carousel Image 4",
                   cardText: "Youtube Automation",
                   cardBody:
@@ -448,11 +448,11 @@ export default function Home() {
             OPPORTUNITIES
           </h1>
           <p>Connect with Our Experienced Advisors Today!</p>
-          <a href="/about">
+          <Link href="/about">
             <Button className="rounded-3xl px-auto py-4 w-56 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
               Book a Free Consultation
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
     </>

@@ -1,142 +1,218 @@
-import Image from 'next/image'
-import React from 'react'
-import img from '../public/imgs/about page main image.jpg'
-import img2 from '../public/imgs/about pic 2.png'
-import { Button } from '@/components/ui/button'
-import amazonLogo from '../public/imgs/amazon logo.png'
-import ytLogo from '../public/imgs/ytLogo.png'
-import tiktokLogo from '../public/imgs/TikTokLogo.png'
-import shopifyLogo from '../public/imgs/shopifyLogo.png'
-import OurValues from '@/components/OurValues'
-import ethan from '../public/imgs/ethan.png'
-import olivia from '../public/imgs/olivia.png'
-import emily from '../public/imgs/emily.png'
-import lucas from '../public/imgs/lucas.png'
-import wave from '../public/imgs/wave.png'
-import BlogCard from '@/components/BlogCard'
-import blogImg1 from '../public/imgs/blog-img-1.png'
-import blogImg2 from '../public/imgs/blog-img-2.png'
-import blogImg3 from '../public/imgs/blog-img-3.png'
+import Image from "next/image";
+import React from "react";
+import img from "../public/imgs/about page main image.jpg";
+import img2 from "../public/imgs/about pic 2.png";
+import { Button } from "@/components/ui/button";
+import amazonLogo from "../public/imgs/amazon logo.png";
+import ytLogo from "../public/imgs/ytLogo.png";
+import tiktokLogo from "../public/imgs/TikTokLogo.png";
+import shopifyLogo from "../public/imgs/shopifyLogo.png";
+import OurValues from "@/components/OurValues";
+import ethan from "../public/imgs/ethan.png";
+import olivia from "../public/imgs/olivia.png";
+import emily from "../public/imgs/emily.png";
+import lucas from "../public/imgs/lucas.png";
+import wave from "../public/imgs/wave.png";
+import BlogCard from "@/components/BlogCard";
+import blogImg1 from "../public/imgs/blog-img-1.png";
+import blogImg2 from "../public/imgs/blog-img-2.png";
+import blogImg3 from "../public/imgs/blog-img-3.png";
 import Accordian from "../../components/ui/Accordian";
 import accordianPic from "../public/imgs/accordianPic.svg";
-import Testimonial from '@/components/Testimonial'
+import Testimonial from "@/components/Testimonial";
+import Link from "next/link";
 
 export default function page() {
-    return (
-        <>
-            {/* Main section */}
-            <section className='container flex flex-col lg:flex-row mx-auto my-20 gap-20 justify-center items-center'>
-                <div className='flex flex-col items-center md:w-[35rem] text-titleColor p-3 text-center lg:text-start gap-5 '>
-                    <h1 className='flex flex-col md:flex-row text-3xl w-[340px] md:w-full md:text-5xl font-semibold leading-relaxed md:leading-relaxed'>Helping Millions Grow Better Since 2010</h1>
-                    <h3 className='text-textColor w-[340px] md:w-full'>Et et id laoreet ultricies elementum venenatis ornare. Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus quis egestas tincidunt neque ut accumsan.</h3>
-                    <a href="/contact-us"><Button className="rounded-xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
-                        Book a Call
-                    </Button></a>
-                </div>
-                <div className='p-3 lg:p-0'>
-                    <Image src={img} alt='Main Image' className='rounded-xl w-[350px] md:w-[540px]' width={540} height={389} />
-                </div>
-            </section>
+  return (
+    <>
+      {/* Main section */}
+      <section className="container flex flex-col lg:flex-row mx-auto my-20 gap-20 justify-center items-center">
+        <div className="flex flex-col items-center lg:items-start md:w-[35rem] text-titleColor p-3 text-center lg:text-start gap-5 ">
+          <h1 className="flex flex-col md:flex-row text-3xl w-[340px] md:w-full md:text-5xl font-semibold leading-relaxed md:leading-relaxed">
+            Helping Millions Grow Better Since 2010
+          </h1>
+          <h3 className="text-textColor w-[340px] md:w-full">
+            We provide innovative solutions that empower growth and enhance
+            experiences. Our commitment to excellence drives us to support your
+            journey to success.
+          </h3>
+          <Link href="/contact-us">
+            <Button className="rounded-xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
+              Book a Call
+            </Button>
+          </Link>
+        </div>
+        <div className="p-3 lg:p-0">
+          <Image
+            src={img}
+            alt="Main Image"
+            className="rounded-xl w-[350px] md:w-[540px]"
+            width={540}
+            height={389}
+          />
+        </div>
+      </section>
 
-            {/* Grid  */}
-            <section className='container mx-auto lg:py-20'>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:w-[50rem] mx-auto gap-20 text-titleColor p-3'>
-                    <div className='flex'>
-                        <Image src={amazonLogo} alt='Amazon logo' className='object-contain mb-auto' />
-                        <div className='mx-5 leading-loose'>
-                            <h2 className='text-2xl mb-5'>Amazon Automation</h2>
-                            <h3 className='text-textColor'>Lorem Ipsum has been the industryLorem Ipsum has been the </h3>
-                        </div>
-                    </div>
-                    <div className='flex'>
-                        <Image src={shopifyLogo} alt='Shopify logo' className='object-contain mb-auto' />
-                        <div className='mx-5 leading-loose'>
-                            <h2 className='text-2xl mb-5'>Shopify Automation</h2>
-                            <h3 className='text-textColor'>Lorem Ipsum has been the industryLorem Ipsum has been the </h3>
-                        </div>
-                    </div>
-                    <div className='flex'>
-                        <Image src={tiktokLogo} alt='TikTok logo' className='object-contain mb-auto' />
-                        <div className='mx-5 leading-loose'>
-                            <h2 className='text-2xl mb-5'>TikTok Automation</h2>
-                            <h3 className='text-textColor'>Lorem Ipsum has been the industryLorem Ipsum has been the </h3>
-                        </div>
-                    </div>
-                    <div className='flex'>
-                        <Image src={ytLogo} alt='Youtube logo' className='object-contain mb-auto' />
-                        <div className='mx-5 leading-loose'>
-                            <h2 className='text-2xl mb-5'>Youtube Automation</h2>
-                            <h3 className='text-textColor'>Lorem Ipsum has been the industryLorem Ipsum has been the </h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      {/* Grid  */}
+      <section className="container mx-auto lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:w-[50rem] mx-auto gap-20 text-titleColor p-3">
+          <div className="flex">
+            <Image
+              src={amazonLogo}
+              alt="Amazon logo"
+              className="object-contain mb-auto"
+            />
+            <div className="mx-5 leading-loose">
+              <h2 className="text-2xl mb-5">Amazon Automation</h2>
+              <h3 className="text-textColor">
+                Streamline your operations and boost sales with automated
+                product listings and inventory management on Amazon.
+              </h3>
+            </div>
+          </div>
+          <div className="flex">
+            <Image
+              src={shopifyLogo}
+              alt="Shopify logo"
+              className="object-contain mb-auto"
+            />
+            <div className="mx-5 leading-loose">
+              <h2 className="text-2xl mb-5">Shopify Automation</h2>
+              <h3 className="text-textColor">
+                Enhance your e-commerce efficiency by automating order
+                processing and customer engagement on Shopify.
+              </h3>
+            </div>
+          </div>
+          <div className="flex">
+            <Image
+              src={tiktokLogo}
+              alt="TikTok logo"
+              className="object-contain mb-auto"
+            />
+            <div className="mx-5 leading-loose">
+              <h2 className="text-2xl mb-5">TikTok Automation</h2>
+              <h3 className="text-textColor">
+                Grow your brand's presence and engagement by automating content
+                scheduling and audience interaction on TikTok.
+              </h3>
+            </div>
+          </div>
+          <div className="flex">
+            <Image
+              src={ytLogo}
+              alt="Youtube logo"
+              className="object-contain mb-auto"
+            />
+            <div className="mx-5 leading-loose">
+              <h2 className="text-2xl mb-5">YouTube Automation</h2>
+              <h3 className="text-textColor">
+                Maximize your video reach and viewer engagement by automating
+                uploads, SEO, and analytics on YouTube.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Our mission  */}
-            <section className='container flex flex-col lg:flex-row mx-auto my-20 lg:my-40 gap-20 justify-center items-center'>
-                <div className='p-3 lg:p-0'>
-                    <Image src={img2} alt='Main Image' className='rounded-xl ' width={540} height={389} />
-                </div>
-                <div className='lg:w-[35rem] text-center lg:text-start p-3'>
-                    <h1 className='flex flex-col lg:flex-row text-5xl text-titleColor font-semibold leading-loose mb-5'>Our Mission</h1>
-                    <h2 className='text-[#1D2939] text-2xl leading-relaxed my-5'>Innovative Digital Marketing Solutions to Boost Your Sales</h2>
-                    <h3 className='text-textColor leading-loose'>Nullam dictum neque dignissim lacinia. Adipiscing quam nunc non odio ac dolor felis euismod venenatis. Pellentesque erat gravida enim sapien. Enim tincidunt volutpat vitae ac. Dictum purus id sed aliquam ornare. Ac congue vitae vel velit.</h3>
+      {/* Our mission  */}
+      <section className="container flex flex-col lg:flex-row mx-auto my-20 lg:my-40 gap-20 justify-center items-center">
+        <div className="p-3 lg:p-0">
+          <Image
+            src={img2}
+            alt="Main Image"
+            className="rounded-xl "
+            width={540}
+            height={389}
+          />
+        </div>
+        <div className="lg:w-[35rem] text-center lg:text-start p-3">
+          <h1 className="flex flex-col lg:flex-row text-5xl text-titleColor font-semibold leading-loose mb-5">
+            Our Mission
+          </h1>
+          <h2 className="text-3xl font-semibold text-titleColor leading-relaxed my-5">
+            Innovative Digital Marketing Solutions to Boost Your Sales
+          </h2>
+          <h3 className="text-lg text-textColor leading-loose mb-5">
+            We empower businesses with cutting-edge strategies and insights,
+            ensuring your growth and success in a competitive market. Our
+            dedicated team crafts personalized approaches that resonate with
+            your audience.
+          </h3>
 
+          <h2 className="mt-5 text-2xl text-titleColor">Ecom Pinnacle</h2>
+          <h3 className="text-sm text-[#F8A62B] my-2">Co-Founder</h3>
+        </div>
+      </section>
 
-                    <h2 className='mt-5 text-xl text-titleColor'>
-                        Ecom Pinnacle
-                    </h2>
-                    <h3 className='text-sm text-[#F8A62B] my-2'>
-                        Co-Founder
-                    </h3>
-                </div>
-            </section>
+      {/* Our values  */}
+      <section className="my-20 lg:my-40">
+        <OurValues />
+      </section>
 
-            {/* Our values  */}
-            <section className='my-20 lg:my-40'>
-                <OurValues />
-            </section>
+      {/* meet our experts  */}
+      <section className="container mx-auto my-20 lg:my-40 p-3">
+        <div className="text-center lg:w-[58rem] mx-auto">
+          <h1 className="text-5xl font-semibold my-10 text-titleColor">
+            Meet Our Expertise
+          </h1>
+          <h3 className="text-2xl font-medium my-5 text-textColor leading-loose">
+            Discover the breadth of our knowledge and skills, tailored to
+            elevate your experience. Our team is dedicated to providing
+            exceptional service and innovative solutions.
+          </h3>
+        </div>
 
-            {/* meet our experts  */}
-            <section className='container mx-auto my-20 lg:my-40 p-3'>
-                <div className="text-center lg:w-[58rem] mx-auto">
-                    <h1 className='text-5xl font-semibold my-10 text-titleColor'>Meet Our Expertise</h1>
-                    <h3 className='text-textColor leading-loose'>Et et id laoreet ultricies elementum venenatis ornare. Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus quis egestas tincidunt neque ut accumsan.</h3>
-                </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-20 lg:mt-40 place-items-center'>
-                    <div>
-                        <Image src={olivia} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
-                        <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
-                            <h3 className='text-titleColor text-2xl'>Olivia Brown</h3>
-                            <h4 className='text-textColor text-xs'>Marketing Strategist</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <Image src={ethan} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
-                        <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
-                            <h3 className='text-titleColor text-2xl'>Ethan Clark</h3>
-                            <h4 className='text-textColor text-xs'>SEO Specialist</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <Image src={emily} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
-                        <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
-                            <h3 className='text-titleColor text-2xl'>Emily Davis</h3>
-                            <h4 className='text-textColor text-xs'>Social Media Manager</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <Image src={lucas} alt='Main Image' className='rounded-xl object-contain w-[16.875rem]' />
-                        <div className='bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle'>
-                            <h3 className='text-titleColor text-2xl'>Lucas Evans</h3>
-                            <h4 className='text-textColor text-xs'>Content Creator</h4>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-20 lg:mt-40 place-items-center">
+          <div>
+            <Image
+              src={olivia}
+              alt="Main Image"
+              className="rounded-xl object-contain w-[16.875rem]"
+            />
+            <div className="bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle">
+              <h3 className="text-titleColor text-2xl">Olivia Brown</h3>
+              <h4 className="text-textColor text-xs">Marketing Strategist</h4>
+            </div>
+          </div>
+          <div>
+            <Image
+              src={ethan}
+              alt="Main Image"
+              className="rounded-xl object-contain w-[16.875rem]"
+            />
+            <div className="bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle">
+              <h3 className="text-titleColor text-2xl">Ethan Clark</h3>
+              <h4 className="text-textColor text-xs">SEO Specialist</h4>
+            </div>
+          </div>
+          <div>
+            <Image
+              src={emily}
+              alt="Main Image"
+              className="rounded-xl object-contain w-[16.875rem]"
+            />
+            <div className="bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle">
+              <h3 className="text-titleColor text-2xl">Emily Davis</h3>
+              <h4 className="text-textColor text-xs">Social Media Manager</h4>
+            </div>
+          </div>
+          <div>
+            <Image
+              src={lucas}
+              alt="Main Image"
+              className="rounded-xl object-contain w-[16.875rem]"
+            />
+            <div className="bg-[#FEF6FB] rounded-xl text-center w-[16.875rem] p-6 my-2 align-middle">
+              <h3 className="text-titleColor text-2xl">Lucas Evans</h3>
+              <h4 className="text-textColor text-xs">Content Creator</h4>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* affordable price for everyone  */}
-            {/* <section className="bg-primaryColor text-white py-40 my-20">
+      {/* affordable price for everyone  */}
+      {/* <section className="bg-primaryColor text-white py-40 my-20">
                 <div className="max-w-[85rem] w-8/12 mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 text-center lg:text-start">
                     
                     <div className="space-y-6 lg:pr-8 border-b lg:border-b-0 lg:border-r-2 border-[#4A1FB8] pb-8 lg:pb-0">
@@ -177,56 +253,56 @@ export default function page() {
                 </div>
             </section> */}
 
-            {/* Accordian */}
-            <section className='my-20'>
-                <div className="flex flex-col lg:flex-row justify-center items-center gap-20 mx-auto p-5">
-                    <div className="flex flex-col">
-                        <h1 className="text-3xl font-semibold mb-10">
-                            Frequently Asked Questions
-                        </h1>
-                        <div className="max-w-[35rem]">
-                            <Accordian />
-                        </div>
-                    </div>
-                    <Image src={accordianPic} alt="Accordian Pic" />
-                </div>
-            </section>
+      {/* Accordian */}
+      <section className="my-20">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-20 mx-auto p-5">
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-semibold mb-10">
+              Frequently Asked Questions
+            </h1>
+            <div className="max-w-[35rem]">
+              <Accordian />
+            </div>
+          </div>
+          <Image src={accordianPic} alt="Accordian Pic" />
+        </div>
+      </section>
 
-            {/* Testimonial */}
-            <section className='my-20'>
-                <Testimonial />
-            </section>
+      {/* Testimonial */}
+      <section className="my-20">
+        <Testimonial />
+      </section>
 
-            {/* Blogs */}
-            <section className="w-full my-[120px] px-5">
-                <div className="container mx-auto">
-                    <div className="flex flex-col items-center gap-4">
-                        <h1 className="font-semibold text-[#4D4D4D] text-4xl">
-                            Caring is the new marketing
-                        </h1>
-                        <p className="text-[#717171] lg:w-[628px] text-center">
-                            The Nexcent blog is the best place to read about the latest
-                            membership insights, trends and more. See who's joining the
-                            community, read about how our community are increasing their
-                            membership income and lot's more.
-                        </p>
-                        <div className="flex flex-col lg:flex-row gap-4">
-                            <BlogCard
-                                img={blogImg1}
-                                text="Creating Streamlined Safeguarding Processes with OneRen"
-                            />
-                            <BlogCard
-                                img={blogImg2}
-                                text="What are your safeguarding responsibilities and how can you manage them?"
-                            />
-                            <BlogCard
-                                img={blogImg3}
-                                text="Revamping the Membership Model with Triathlon Australia Together"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    )
+      {/* Blogs */}
+      <section className="w-full my-[120px] px-5">
+        <div className="container mx-auto">
+          <div className="flex flex-col items-center gap-4">
+            <h1 className="font-semibold text-[#4D4D4D] text-4xl">
+              Caring is the new marketing
+            </h1>
+            <p className="text-[#717171] lg:w-[628px] text-center">
+              The Nexcent blog is the best place to read about the latest
+              membership insights, trends and more. See who's joining the
+              community, read about how our community are increasing their
+              membership income and lot's more.
+            </p>
+            <div className="flex flex-col lg:flex-row gap-4">
+              <BlogCard
+                img={blogImg1}
+                text="Creating Streamlined Safeguarding Processes with OneRen"
+              />
+              <BlogCard
+                img={blogImg2}
+                text="What are your safeguarding responsibilities and how can you manage them?"
+              />
+              <BlogCard
+                img={blogImg3}
+                text="Revamping the Membership Model with Triathlon Australia Together"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

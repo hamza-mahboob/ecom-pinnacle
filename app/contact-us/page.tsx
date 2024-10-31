@@ -70,7 +70,7 @@ function page() {
                       </div>
                       <div className="flex flex-col">
                         <h1 className="font-semibold text-[25px]">Phone</h1>
-                        <p>+44123456788</p>
+                        <p>+447857153351</p>
                       </div>
                     </div>
                   </div>

@@ -6,6 +6,7 @@ import ourValuesBg from "../app/public/imgs/ourValuesBg.png";
 import iconBox from "../app/public/imgs/Icon-Box.png";
 import NumberTicker from "@/components/ui/number-ticker";
 import wave from "../app/public/imgs/wave.png";
+import Link from "next/link";
 
 export default function OurValues() {
   const values = [
@@ -73,7 +74,7 @@ export default function OurValues() {
 
             <h1>
               Say Hi!{" "}
-              <span className="text-secondaryColor">+44 785 715 3351</span>
+              <Link href={"tel:+447857153351"} className="text-secondaryColor">+44 7857153351</Link>
             </h1>
           </div>
 

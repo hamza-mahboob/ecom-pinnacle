@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
-import img from "../../public/imgs/about page main image.jpg";
+import img from "../../public/imgs/service-hero.svg";
 import timelineImg1 from "../../public/imgs/planning pic 1.jpg";
 import timelineImg2 from "../../public/imgs/planning pic 2.jpg";
 import timelineImg3 from "../../public/imgs/planning pic 3.jpg";
@@ -419,9 +419,11 @@ export default function page() {
             OPPORTUNITIES
           </h1>
           <p>Connect with Our Experienced Advisors Today!</p>
-          <Button className="rounded-3xl px-auto py-4 w-56 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
-            Book a Free Consultation
-          </Button>
+          <Link href="/about">
+            <Button className="rounded-3xl px-auto py-4 w-56 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
+              Book a Free Consultation
+            </Button>
+          </Link>
         </div>
       </section>
 
