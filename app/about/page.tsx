@@ -139,9 +139,6 @@ export default function page() {
             dedicated team crafts personalized approaches that resonate with
             your audience.
           </h3>
-
-          <h2 className="mt-5 text-2xl text-titleColor">Ecom Pinnacle</h2>
-          <h3 className="text-sm text-[#F8A62B] my-2">Co-Founder</h3>
         </div>
       </section>
 
@@ -274,7 +271,7 @@ export default function page() {
       </section>
 
       {/* Blogs */}
-      <section className="w-full my-[120px] px-5">
+      {/* <section className="w-full my-[120px] px-5">
         <div className="container mx-auto">
           <div className="flex flex-col items-center gap-4">
             <h1 className="font-semibold text-[#4D4D4D] text-4xl">
@@ -302,7 +299,7 @@ export default function page() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

@@ -18,6 +18,11 @@ export default function Header() {
     setIsServicesOpen(!isServicesOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false)
+  };
+
   return (
     <>
       <header className="w-full px-5">
@@ -45,7 +50,7 @@ export default function Header() {
 
             {/* Navigation links - hidden on small screens, visible on medium and above */}
             <div className="hidden md:flex gap-10 items-center">
-              <Link href='/' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={closeMenu}>
                 Home
               </Link>
               <div className="relative">
@@ -56,23 +61,23 @@ export default function Header() {
                   Services
                 </button>
                 {isServicesOpen && (
-                  <div className="absolute left-0 mt-2 bg-white shadow-md rounded-md z-20 w-40">
+                  <div className="absolute left-0 mt-2 bg-white shadow-md rounded-md z-20 w-48">
                     <Link href='/services/amazon' className="block px-4 py-2 text-textColor hover:bg-gray-100" onClick={toggleServices}>
-                      Amazon
+                      Amazon Automation
                     </Link>
                     <Link href='/services/shopify' className="block px-4 py-2 text-textColor hover:bg-gray-100" onClick={toggleServices}>
-                      Shopify
+                      Shopify Automation
                     </Link>
                     <Link href='/services/tiktok' className="block px-4 py-2 text-textColor hover:bg-gray-100" onClick={toggleServices}>
-                      TikTok
+                      TikTok Automation
                     </Link>
                   </div>
                 )}
               </div>
-              <Link href='/about' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/about' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={closeMenu}>
                 About
               </Link>
-              <Link href='/contact-us' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/contact-us' className="cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={closeMenu}>
                 Contact Us
               </Link>
             </div>
@@ -88,7 +93,7 @@ export default function Header() {
           {/* Dropdown Menu for small and medium screens */}
           {isMenuOpen && (
             <div className="md:hidden mt-4 space-y-2">
-              <Link href='/' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={closeMenu}>
                 Home
               </Link>
               <div className="block">
@@ -100,22 +105,22 @@ export default function Header() {
                 </button>
                 {isServicesOpen && (
                   <div className="ml-4 mt-2 space-y-2">
-                    <Link href='/services/amazon' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
-                      Amazon
+                    <Link href='/services/amazon' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={toggleServices}>
+                      Amazon Automation
                     </Link>
-                    <Link href='/services/shopify' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
-                      Shopify
+                    <Link href='/services/shopify' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={toggleServices}>
+                      Shopify Automation
                     </Link>
-                    <Link href='/services/tiktok' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
-                      TikTok
+                    <Link href='/services/tiktok' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={toggleServices}>
+                      TikTok Automation
                     </Link>
                   </div>
                 )}
               </div>
-              <Link href='/about' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/about' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={closeMenu}>
                 About
               </Link>
-              <Link href='/contact-us' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline">
+              <Link href='/contact-us' className="block cursor-pointer text-textColor hover:text-hoverTextColor hover:underline" onClick={closeMenu}>
                 Contact Us
               </Link>
             </div>
