@@ -400,11 +400,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hidden xl:block container mx-auto my-40">
-        <div className="absolute ml-2.5">
+      <section className="container mx-auto my-20 xl:my-40">
+        <div className="xl:absolute ml-2.5">
           <Carousel items={cards} />
         </div>
-        <div className="relative">
+        <div className="xl:relative hidden xl:block">
           <DeviceFrameset
             device="iPhone X"
             height={750}
