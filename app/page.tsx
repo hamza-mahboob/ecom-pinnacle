@@ -39,6 +39,7 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { useRef } from "react";
 
 export default function Home() {
+  //resolved jpg error
   const DummyContent = () => {
     return (
       <>
