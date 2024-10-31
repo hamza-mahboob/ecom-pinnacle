@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import hero from "./public/imgs/hero.png";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ import c1p3 from "./public/imgs/c1p3.svg";
 import c1p4 from "./public/imgs/c1p4.svg";
 import c2p1 from "./public/imgs/c2p1.png";
 import c2p2 from "./public/imgs/youtube-automation-carousel-pic.webp";
+import c2p3 from "./public/imgs/c2p3.jpg";
 import c2p4 from "./public/imgs/amazon-automation-carousel-pic-2.webp";
 import phonec1p1 from "./public/imgs/phonec1p1.webp";
 import phonec1p2 from "./public/imgs/phonec1p2.webp";
@@ -31,10 +33,10 @@ import OurValues from "@/components/OurValues";
 import Testimonial from "@/components/Testimonial";
 import SecondCarousel from "@/components/ui/SecondCarousel";
 import Link from "next/link";
-import { DeviceFrameset } from 'react-device-frameset'
-import 'react-device-frameset/styles/marvel-devices.min.css'
+import { DeviceFrameset } from "react-device-frameset";
+import "react-device-frameset/styles/marvel-devices.min.css";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-
+import { useRef } from "react";
 
 export default function Home() {
   const DummyContent = () => {
@@ -48,12 +50,13 @@ export default function Home() {
             >
               <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
                 <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                  The first rule of Apple club is that you boast about Apple club.
+                  The first rule of Apple club is that you boast about Apple
+                  club.
                 </span>{" "}
-                Keep a journal, quickly jot down a grocery list, and take amazing
-                class notes. Want to convert those notes to text? No problem.
-                Langotiya jeetu ka mara hua yaar is ready to capture every
-                thought.
+                Keep a journal, quickly jot down a grocery list, and take
+                amazing class notes. Want to convert those notes to text? No
+                problem. Langotiya jeetu ka mara hua yaar is ready to capture
+                every thought.
               </p>
               <Image
                 src="https://assets.aceternity.com/macbook.png"
@@ -99,8 +102,13 @@ export default function Home() {
   const cards = data.map((card, index) => (
     //@ts-ignore
     <Card key={card.src} card={card} index={index} />
-  )
-  )
+  ));
+
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const scrolltoStats = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -110,20 +118,21 @@ export default function Home() {
             <div className="mt-[120px] w-full lg:w-[580px] order-2 lg:order-1">
               <h1 className="text-headingColor text-4xl md:text-[87px] font-light leading-[1]">
                 <span className="font-bold">Ecom pinnacle </span>
-                <span className="font-light">turns business goals into reality</span>
+                <span className="font-light">
+                  turns business goals into reality
+                </span>
               </h1>
 
-              <div className="h-[12px] w-20 md:w-[39rem] lg:w-[220px] bg-secondaryColor -mt-2 lg:-mt-4 mb-[27px] ml-[136px] md:ml-[50px] lg:ml-0"></div>
+              <div className="h-[12px] w-20 md:w-[15rem] lg:w-[220px] bg-secondaryColor -mt-2 lg:-mt-4 mb-[27px] ml-[136px] md:ml-[440px] lg:ml-0"></div>
 
               <p className="text-headingColor opacity-[66%]">
-                Searching for an ecommerce consultant for
-                expert level automation services? ECOM
-                PINNACLE; your single source platform for
-                ecommerce automation. The one place that
-                provides YouTube, TikTok, Shopify, Amazon
-                automation services according to your needs
+                Searching for an ecommerce consultant for expert level
+                automation services? ECOM PINNACLE; your single source platform
+                for ecommerce automation. The one place that provides YouTube,
+                TikTok, Shopify, Amazon automation services according to your
+                needs
               </p>
-              <Link href={'/contact-us'}>
+              <Link href={"/contact-us"}>
                 <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
                   GET STARTED
                 </Button>
@@ -151,7 +160,9 @@ export default function Home() {
         style={{ backgroundImage: `url(${ctaImg.src})` }}
       >
         <div className="text-center">
-          <h2 className="text-[32px] lg:text-[64px] w-full lg:w-[393px]">Elevate Your Brand Today!</h2>
+          <h2 className="text-[32px] lg:text-[64px] w-full lg:w-[393px]">
+            Elevate Your Brand Today!
+          </h2>
         </div>
 
         <div className="w-full lg:w-[483px]">
@@ -184,26 +195,30 @@ export default function Home() {
                   myClass: "w-full",
                   basis: "lg:basis-5/12 basis-full",
                   cardText: "Amazon Automation",
-                  cardBody: "From refining product listings to launching impactful advertising campaigns, we ensure your brand excels in a competitive marketplace, driving both growth and success online."
+                  cardBody:
+                    "From refining product listings to launching impactful advertising campaigns, we ensure your brand excels in a competitive marketplace, driving both growth and success online.",
                 },
                 {
                   src: c1p2,
                   alt: "Carousel Image 2",
                   cardText: "Shopify Automation",
-                  cardBody: "We simplify your e-commerce journey by purchasing products from a brand or supplier and then selling them on Shopify with an added profit margin."
+                  cardBody:
+                    "We simplify your e-commerce journey by purchasing products from a brand or supplier and then selling them on Shopify with an added profit margin.",
                 },
                 {
                   src: c1p3,
                   alt: "Carousel Image 3",
 
                   cardText: "TikTok Automation",
-                  cardBody: 'We build thriving TikTok shop at your pace, providing tailored support exactly when you need it. Skip the overwhelm, maximize your sales, and conquer the marketplace one step at a time with our "Just-in-Time" approach.'
+                  cardBody:
+                    'We build thriving TikTok shop at your pace, providing tailored support exactly when you need it. Skip the overwhelm, maximize your sales, and conquer the marketplace one step at a time with our "Just-in-Time" approach.',
                 },
                 {
                   src: c1p4,
                   alt: "Carousel Image 4",
                   cardText: "Youtube Automation",
-                  cardBody: "Our company provides comprehensive YouTube services to enhance your brand’s visibility. We help you Youtube create engaging content, grow your audience, and drive meaningful connections through impactful video strategies."
+                  cardBody:
+                    "Our company provides comprehensive YouTube services to enhance your brand’s visibility. We help you Youtube create engaging content, grow your audience, and drive meaningful connections through impactful video strategies.",
                 },
                 // Add more images here
               ]}
@@ -226,15 +241,12 @@ export default function Home() {
               </h1>
 
               <p className="text-headingColor opacity-[66%] mb-[9px]">
-                Our team are professionals with
-                years of e-commerce and digital
-                marketing experience. We know what
-                it’s like to run an online business in
-                the UK and will be with you every
-                step of the way
+                Our team are professionals with years of e-commerce and digital
+                marketing experience. We know what it’s like to run an online
+                business in the UK and will be with you every step of the way
               </p>
 
-              <Link href={'/about'}>
+              <Link href={"/about"}>
                 <Button className="rounded-3xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
                   Get Free Consultation
                 </Button>
@@ -255,14 +267,14 @@ export default function Home() {
               <h1 className="text-headingColor text-start text-4xl lg:text-[48px] font-normal leading-[1] z-10">
                 Ecom Pinnacle
               </h1>
-              <div className="h-[8px] w-28 lg:w-[155px] bg-secondaryColor -mt-2 mb-[27px] ml-[7rem] lg:ml-[10rem]"></div>
+              <div className="h-[8px] w-28 lg:w-[180px] bg-secondaryColor -mt-2 mb-[27px] ml-[7rem] lg:ml-[9rem]"></div>
             </div>
             <div className="hidden md:flex w-[20rem] lg:w-[32rem] ml-auto items-center justify-start text-start text-headingColor p-5 mt-16 mx-8">
               <h3>
                 Our expert team brings automation solutions tailored for maximum
-                ROI, backed by a proven track record and skilled professionals. Let
-                us simplify your path to e-commerce growth with impactful, data
-                driven results.
+                ROI, backed by a proven track record and skilled professionals.
+                Let us simplify your path to e-commerce growth with impactful,
+                data driven results.
               </h3>
             </div>
           </div>
@@ -299,35 +311,41 @@ export default function Home() {
                 // Add more images here
               ]}
             /> */}
-            <SecondCarousel images={[
-              {
-                src: c2p1,
-                alt: "Carousel 2 Image 1",
-                width: 1000,
-                title: "Shopify Store",
-                description: "View Work"
-              },
-              {
-                src: c2p2,
-                alt: "Carousel 2 Image 2",
-                title: "Youtube Automation",
-                description: "View Work"
-              },
-              {
-                src: c2p1,
-                alt: "Carousel 2 Image 3",
-                title: "Tiktok Shop",
-                description: "View Work"
-              },
-              {
-                src: c2p4,
-                alt: "Carousel 2 Image 4",
-                title: "Amazon Automation",
-                description: "View Work"
-              },
+            <SecondCarousel 
+              images={[
+                {
+                  src: c2p1,
+                  alt: "Carousel 2 Image 1",
+                  width: 1000,
+                  title: "Shopify Store",
+                  description: "View Work",
+                  scrolltoStats,
+                },
+                {
+                  src: c2p2,
+                  alt: "Carousel 2 Image 2",
+                  title: "Youtube Automation",
+                  description: "View Work",
+                  scrolltoStats,
+                },
+                {
+                  src: c2p3,
+                  alt: "Carousel 2 Image 3",
+                  title: "Tiktok Shop",
+                  description: "View Work",
+                  scrolltoStats,
+                },
+                {
+                  src: c2p4,
+                  alt: "Carousel 2 Image 4",
+                  title: "Amazon Automation",
+                  description: "View Work",
+                  scrolltoStats,
+                },
 
-              // Add more images here
-            ]} />
+                // Add more images here
+              ]}
+            />
           </div>
         </div>
       </section>
@@ -367,7 +385,7 @@ export default function Home() {
       </section> */}
 
       {/* Grid */}
-      <section>
+      <section ref={ref}>
         <div className="w-full">
           <h1 className="text-center text-4xl my-20 font-semibold text-[#4D4D4D]">
             Our clients success stories
@@ -387,8 +405,11 @@ export default function Home() {
           <Carousel items={cards} />
         </div>
         <div className="relative">
-          <DeviceFrameset device="iPhone X" height={750} width={360}>
-          </DeviceFrameset>
+          <DeviceFrameset
+            device="iPhone X"
+            height={750}
+            width={360}
+          ></DeviceFrameset>
         </div>
       </section>
 
@@ -412,7 +433,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* CTA Section 2 with background image */}
       <section
         className="flex flex-row md:w-[700px] lg:w-[950px] xl:w-[1280px] h-[455px] mx-5 md:mx-auto my-[120px] justify-between px-5 rounded-3xl"
@@ -428,9 +448,11 @@ export default function Home() {
             OPPORTUNITIES
           </h1>
           <p>Connect with Our Experienced Advisors Today!</p>
-          <Button className="rounded-3xl px-auto py-4 w-56 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
-            Book a Free Consultation
-          </Button>
+          <a href="/about">
+            <Button className="rounded-3xl px-auto py-4 w-56 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px]">
+              Book a Free Consultation
+            </Button>
+          </a>
         </div>
       </section>
     </>

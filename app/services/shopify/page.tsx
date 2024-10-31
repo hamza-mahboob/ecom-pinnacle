@@ -23,6 +23,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Testimonial from "@/components/Testimonial";
 import PricingPage from "@/components/ui/pricing-plans";
+import Link from "next/link";
 
 export default function page() {
   const data = [
@@ -209,9 +210,9 @@ export default function page() {
       ),
     },
     {
-      title: "Product Listing and Inventory Management",
+      title: "Product Hunting and Inventory Management",
       description:
-        "Keep your product catalog well-organized with our product listing and inventory management service. We assist in uploading products, writing compelling descriptions, and managing inventory levels, ensuring that your listings are optimized for conversion and engagement.",
+        "We search products that are according to your niche and help you in selling them with our efficient marketing strategies and managing inventory.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white">
           <Image
@@ -243,7 +244,7 @@ export default function page() {
     {
       title: "Marketing and SEO Optimization",
       description:
-        "Boost your Shopify store's visibility with our marketing and SEO services. We implement strategies that improve your search engine ranking, drive traffic, and convert visitors into customers, helping your store grow sustainably.",
+        "We help you optimize SEO that ranks higher in the search engine so your product can reach more people. Rank High Gain Higher!",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white">
           <Image
@@ -392,9 +393,11 @@ export default function page() {
             and enhancing the sales of top- performing dropshipping products,
             all with personalized labels.
           </h3>
-          <Button className="rounded-full px-32 lg:px-40 py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
-            Book a Free Consultation
-          </Button>
+          <Link href="/contact-us">
+            <Button className="rounded-full px-32 lg:px-40 py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
+              Book a Free Consultation
+            </Button>
+          </Link>
         </div>
         <div className="p-3 lg:p-0">
           <Image

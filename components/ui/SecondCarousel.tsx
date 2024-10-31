@@ -12,8 +12,19 @@ import Image, { StaticImageData } from "next/image"
 
 
 interface MyCarouselProps {
-  images: { src: StaticImageData, alt: string, width?: number, height?: number, myClass?: string, basis?: string, title: string, description: string }[]
+  images: { 
+    src: StaticImageData; 
+    alt: string; 
+    width?: number; 
+    height?: number; 
+    myClass?: string; 
+    basis?: string; 
+    title: string; 
+    description: string; 
+    scrolltoStats: () => void; // Type as function
+  }[];
 }
+
 
 export default function MyCarousel({ images }: MyCarouselProps) {
   const [api, setApi] = React.useState<any>()
@@ -37,10 +48,10 @@ export default function MyCarousel({ images }: MyCarouselProps) {
           {images.map((card, index) => (
             <CarouselItem key={index} className="lg:basis-5/12 basis-full">
               <div className="flex flex-col w-[338px] h-[294px] bg-white rounded-xl p-2 gap-6 justify-center md:-mr-40 ml-3 md:ml-0">
-                <Image src={card.src} alt="temp" className="object-contain object-center w-[300px] h-[190px] mx-auto" />
+                <Image src={card.src} alt="temp" className="object-cover object-center w-[300px] h-[190px] mx-auto" />
                 <div className="flex flex-row justify-between px-2 ">
                   <h1 className="text-xl text-[#331B3B] font-semibold">{card.title}</h1>
-                  <button className="border border-[#343434] px-4 text-sm rounded-full">{card.description}</button>
+                  <button onClick={card.scrolltoStats} className="border border-[#343434] px-4 text-sm rounded-full">{card.description}</button>
                 </div>
               </div>
             </CarouselItem>

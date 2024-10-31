@@ -19,6 +19,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Testimonial from "@/components/Testimonial";
 import PricingPage from "@/components/ui/pricing-plans";
+import Link from "next/link";
 
 export default function page() {
   const data = [
@@ -190,6 +191,54 @@ export default function page() {
   ];
   const content = [
     {
+      title: "Store creation",
+      description:
+        "Setting up a profitable store that meets its customers’ needs is the first step in dominating the market. We, at ECOM PINNACLE handle everything from product listings to brand visibility for your store. To generate leads we offer analytics, store management, customization and optimization that matches your goals.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src={amazonLogo}
+            width={440}
+            height={440}
+            className="h-full w-full object-cover opacity-90"
+            alt="Amazon store setup"
+          />
+        </div>
+      ),
+    },
+    {
+      title: "FBA Automation on Amazon",
+      description:
+        "Boost your business with competent Amazon FBA automation services. Everything from inventory control to order packing, shipping, tracking, monitoring and Amazon price adjustment is handled by ECOM PINNACLE.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src={amazonLogo}
+            width={440}
+            height={440}
+            className="h-full w-full object-cover opacity-90"
+            alt="Amazon store setup"
+          />
+        </div>
+      ),
+    },
+    {
+      title: "Product listing and content on Amazon",
+      description:
+        "Product hunting with intention and creative content gets you noticed on Amazon. To build your brand presence and authority, we use product hunting techniques, multimedia and content writing to showcase your product with Amazon automation.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src={amazonLogo}
+            width={440}
+            height={440}
+            className="h-full w-full object-cover opacity-90"
+            alt="Amazon store setup"
+          />
+        </div>
+      ),
+    },
+    {
       title: "Product Sourcing & Negotiation",
       description:
         "Our team of sourcing specialists leverages its extensive network of reputable brand wholesalers to find the best possible deals on the products you choose to sell. We negotiate on your behalf to secure the most competitive wholesale pricing and favorable terms, maximizing your profit potential.",
@@ -320,12 +369,15 @@ export default function page() {
             PINNACLE does all the work-from store creation to order management.
             <br />
             <br />
-            Take it to the next level with our Amazon marketing services.ECOM
-            PINNACLE does all the work-from store creation to order management.
+            Setting up a profitable store that meets its customers’ needs is the
+            first step in dominating the market. We, at ECOM PINNACLE handle
+            everything from product listings to brand visibility
           </h3>
-          <Button className="rounded-full px-32 lg:px-40 py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
-            Book a Free Consultation
-          </Button>
+          <Link href="/contact-us">
+            <Button className="rounded-full px-32 lg:px-40 py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
+              Book a Free Consultation
+            </Button>
+          </Link>
         </div>
         <div className="p-3 lg:p-0">
           <Image

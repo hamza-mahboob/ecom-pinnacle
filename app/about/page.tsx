@@ -29,9 +29,9 @@ export default function page() {
                 <div className='flex flex-col items-center md:w-[35rem] text-titleColor p-3 text-center lg:text-start gap-5 '>
                     <h1 className='flex flex-col md:flex-row text-3xl w-[340px] md:w-full md:text-5xl font-semibold leading-relaxed md:leading-relaxed'>Helping Millions Grow Better Since 2010</h1>
                     <h3 className='text-textColor w-[340px] md:w-full'>Et et id laoreet ultricies elementum venenatis ornare. Sollicitudin mauris id aliquet magna adipiscing. In lorem lacus quis egestas tincidunt neque ut accumsan.</h3>
-                    <Button className="rounded-xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
+                    <a href="/contact-us"><Button className="rounded-xl px-auto py-4 w-52 h-16 bg-primaryColor hover:bg-secondaryColor text-base text-[17px] text-white mt-[31px] transition-all duration-500">
                         Book a Call
-                    </Button>
+                    </Button></a>
                 </div>
                 <div className='p-3 lg:p-0'>
                     <Image src={img} alt='Main Image' className='rounded-xl w-[350px] md:w-[540px]' width={540} height={389} />
