@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import contactUs from "../public/imgs/contact-us-hero.png";
 import mainIcon from "../public/imgs/contact-us-form-main-icon.png";
 import { MdOutlineEmail } from "react-icons/md";
@@ -12,6 +12,26 @@ import Accordian from "../../components/ui/Accordian";
 import Link from "next/link";
 
 function page() {
+  const ref = useRef<any>()
+
+  useEffect(() => {
+    if (ref.current) {
+      const elementRect = ref.current.getBoundingClientRect();
+      const offset = 130; // Change this value to your desired offset
+  
+      // Calculate the position to scroll to
+      const targetPosition = elementRect.top + window.scrollY - (window.innerHeight / 2) + (elementRect.height / 2) - offset;
+  
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+  }, []);
+  
+
+
+
   return (
     <>
       {/* Hero Section */}
@@ -34,7 +54,7 @@ function page() {
           </div>
 
           <div className="flex flex-col md:flex-row flex-wrap my-20 items-center gap-10 md:justify-center">
-            <div className="flex flex-col md:flex-row gap-5">
+            {/* <div className="flex flex-col md:flex-row gap-5">
               <div className="w-[340px] h-[270px] bg-[#0E096B1A] rounded-2xl">
                 <div className="w-[310px] h-[220px] bg-white rounded-2xl my-[25px] mx-auto">
                   <div className="flex flex-col gap-[17px] p-5">
@@ -97,9 +117,10 @@ function page() {
                   </div>
                 </div>
               </div>
+            </div> */}
+            <div className="w-full" ref={ref}>
+              <ContactUsForm />
             </div>
-
-            <ContactUsForm />
           </div>
         </div>
       </section>
