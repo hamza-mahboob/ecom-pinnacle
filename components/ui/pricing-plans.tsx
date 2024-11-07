@@ -84,7 +84,7 @@ const Pricing = ({ pricingPlans }: PricingProps) => {
                                 className="my-0 text-3xl font-semibold text-secondaryColor text-opacity-90"
                             >
                                 <span>
-                                    ${billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
+                                    €{billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
                                 </span>
                                 {/* <span className="text-sm font-medium">
                                     /{billingCycle === 'M' ? 'month' : 'year'}

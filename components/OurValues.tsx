@@ -51,7 +51,7 @@ export default function OurValues() {
             <div className="flex flex-col md:flex-row mx-auto lg:mx-0 gap-24 container items-center">
               <div className="flex flex-col gap-2 w-60">
                 <h1 className="text-3xl font-semibold">
-                  $
+                  €
                   <NumberTicker value={5573440} decimalPlaces={0} />
                 </h1>
                 <p>Generated In Revenue For Our Client (So Far)</p>
@@ -59,7 +59,7 @@ export default function OurValues() {
               <div className="flex flex-col gap-2 w-60">
                 <h1 className="text-3xl font-semibold">
                   <div>
-                    $<NumberTicker value={1557300} decimalPlaces={0} />
+                    €<NumberTicker value={1557300} decimalPlaces={0} />
                   </div>
                 </h1>
                 <p>Spent On Google & Facebook Advertising</p>

@@ -356,7 +356,7 @@ export default function page() {
         features: [
             '360 Degree Service, Laser targeting',
             'Have Your Personal Ad Manager',
-            'FREE Niche Store INCLUDED (Value $599)',
+            'FREE Niche Store INCLUDED (Value €599)',
             'Store Ready To Make Sales',
             'First sale guaranteed',
         ],
