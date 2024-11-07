@@ -38,7 +38,7 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #F8A62B; /* Adjust thumb color */
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
