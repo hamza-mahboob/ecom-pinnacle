@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.RECIPIENT_EMAIL, // the email address where you want to receive the contact form data
-      subject: `Contact Us Form: ${subject}`,
+      subject: `${subject}`,
       html: `
         <p><strong>Full Name:</strong> ${fullName}</p>
         <p><strong>Email:</strong> ${email}</p>
