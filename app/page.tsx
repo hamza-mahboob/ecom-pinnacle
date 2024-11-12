@@ -77,9 +77,6 @@ export default function Home() {
       src: phonec1p1,
     },
     {
-      src: phonec1p2,
-    },
-    {
       src: phonec1p3,
     },
     {
@@ -311,7 +308,7 @@ export default function Home() {
                 // Add more images here
               ]}
             /> */}
-            <SecondCarousel 
+            <SecondCarousel
               images={[
                 {
                   src: c2p1,
