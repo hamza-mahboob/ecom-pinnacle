@@ -479,7 +479,7 @@ export default function page() {
 
             <h1 className="text-2xl font-medium">Best Return on Investment</h1>
             <h2 className="font-normal">
-              At Ecom Experts, we believe in maximizing your gains with
+              At Ecom Pinnacle, we believe in maximizing your gains with
               strategic and calculated investments.
             </h2>
           </div>
