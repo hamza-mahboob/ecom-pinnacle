@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
             <div className="text-white text-2xl font-semibold italic opacity-90">
               <h2 className="">We handle the <span className="text-secondaryColor">hassle,</span></h2>
-              <h2>so you can enjoy the <span className="text-secondaryColor">results!</span></h2>
+              <h2>so that you can enjoy the <span className="text-secondaryColor">results!</span></h2>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-y-10 md:gap-y-0 gap-4">
