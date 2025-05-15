@@ -52,21 +52,21 @@ export default function OurValues() {
               <div className="flex flex-col gap-2 w-60">
                 <h1 className="text-3xl font-semibold">
                   €
-                  <NumberTicker value={5573440} decimalPlaces={0} />
+                  <NumberTicker value={573440} decimalPlaces={0} />
                 </h1>
                 <p>Generated In Revenue For Our Client (So Far)</p>
               </div>
               <div className="flex flex-col gap-2 w-60">
                 <h1 className="text-3xl font-semibold">
                   <div>
-                    €<NumberTicker value={1557300} decimalPlaces={0} />
+                    €<NumberTicker value={383000} decimalPlaces={0} />
                   </div>
                 </h1>
                 <p>Spent On Google & Facebook Advertising</p>
               </div>
               <div className="flex flex-col gap-2 w-60">
                 <h1 className="text-3xl font-semibold">
-                  <NumberTicker value={650} decimalPlaces={0} />+
+                  <NumberTicker value={80} decimalPlaces={0} />+
                 </h1>
                 <p>Successful Stores: Built, Deployed, Scaled</p>
               </div>

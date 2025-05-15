@@ -413,7 +413,7 @@ export default function page() {
       </section>
 
       <section className="p-5">
-        <PricingPage pricingPlans={pricingPlans} />
+        <PricingPage pricingPlans={pricingPlans} showAmazonPromos />
       </section>
 
       {/* CTA Section 2 with background image */}
