@@ -15,9 +15,11 @@ interface Plan {
 
 interface PricingProps {
     pricingPlans: Plan[];
+    showAmazonPromos?: boolean;
+    showShopifyPromos?: boolean;
 }
 
-const Pricing = ({ pricingPlans }: PricingProps) => {
+const Pricing = ({ pricingPlans, showAmazonPromos = false, showShopifyPromos = false }: PricingProps) => {
     const [billingCycle, setBillingCycle] = useState<'M' | 'A'>('M');
 
     const Heading = () => (
@@ -65,54 +67,137 @@ const Pricing = ({ pricingPlans }: PricingProps) => {
 
     const PricingCards = () => (
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 lg:flex-row lg:gap-4">
-            {pricingPlans.map((plan, index) => (
-                <div
-                    key={index}
-                    className="w-full rounded-xl border-[1px] border-gray-300 p-6 text-left dark:border-gray-600"
-                >
-                    <p className="mb-1 mt-0 text-sm font-medium uppercase text-primaryColor">
-                        {plan.name}
-                    </p>
-                    <p className="my-0 mb-6 text-sm text-gray-600">{plan.description}</p>
-                    <div className="mb-8 overflow-hidden">
-                        <AnimatePresence mode="wait">
-                            <motion.p
-                                key={billingCycle === 'M' ? 'monthly' : 'annual'}
-                                initial={{ y: -50, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ type: 'spring', stiffness: 100 }}
-                                className="my-0 text-3xl font-semibold text-secondaryColor text-opacity-90"
+            {pricingPlans.map((plan, index) => {
+                const isLast = index === pricingPlans.length - 1;
+                // Amazon discount logic
+                let discount = 0;
+                if (showAmazonPromos) {
+                    discount = isLast ? 0.222222 : 0.5;
+                }
+                // Shopify discount logic
+                let shopifyDiscount = 0;
+                if (showShopifyPromos && isLast) {
+                    // $40 off for last card
+                    shopifyDiscount = 0.4;
+                }
+                const originalPrice = billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice ?? plan.monthlyPrice;
+                const discountedPrice = showAmazonPromos
+                    ? (originalPrice * (1 - discount)).toFixed(2)
+                    : showShopifyPromos && isLast
+                        ? (originalPrice * (1-shopifyDiscount)).toFixed(2)
+                        : originalPrice;
+                return (
+                    <div
+                        key={index}
+                        className="w-full rounded-xl border-[1px] border-gray-300 p-6 text-left dark:border-gray-600 relative"
+                    >
+                        {/* Amazon Discount Tag - Top Left */}
+                        {showAmazonPromos && (
+                            <span
+                                className={
+                                    cn(
+                                        "absolute -left-3 -top-3 z-30 rounded-full px-4 py-1 text-xs font-bold shadow-lg",
+                                        isLast ? "bg-yellow-700 text-white border-2 border-yellow-700" : "bg-red-500 text-white border-2 border-red-500"
+                                    )
+                                }
+                                style={{ minWidth: '80px', textAlign: 'center' }}
                             >
-                                <span>
-                                    €{billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
-                                </span>
-                                {/* <span className="text-sm font-medium">
-                                    /{billingCycle === 'M' ? 'month' : 'year'}
-                                </span> */}
-                            </motion.p>
-                        </AnimatePresence>
-                        <Link href={plan.link}>
-                            <motion.button
-                                whileTap={{ scale: 0.985 }}
-                                // onClick={() => {
-                                //     window.open(plan.link)
-                                // }}
-                                className="mt-8 w-full rounded-lg bg-primaryColor py-2 text-sm font-medium text-white hover:bg-primaryColor/90"
+                                {isLast ? '30% OFF' : '50% OFF'}
+                            </span>
+                        )}
+                        {/* Amazon Most Popular Tag - Top Right (only last card) */}
+                        {showAmazonPromos && isLast && (
+                            <span
+                                className="absolute -right-3 -top-3 z-30 rounded-full bg-blue-600 text-white border-2 border-blue-600 px-4 py-1 text-xs font-bold shadow-lg"
+                                style={{ minWidth: '100px', textAlign: 'center' }}
                             >
-                                Get Started
-                            </motion.button>
-                        </Link>
+                                Most Popular
+                            </span>
+                        )}
+                        {/* Shopify Hot Selling Tag - Top Right (only first card) */}
+                        {showShopifyPromos && index === 0 && (
+                            <span
+                                className="absolute -right-3 -top-3 z-30 rounded-full bg-orange-500 text-white border-2 border-orange-500 px-4 py-1 text-xs font-bold shadow-lg"
+                                style={{ minWidth: '90px', textAlign: 'center' }}
+                            >
+                                Hot Selling
+                            </span>
+                        )}
+                        {/* Shopify $40 Discount Tag - Top Left (only last card) */}
+                        {showShopifyPromos && isLast && (
+                            <span
+                                className="absolute -left-3 -top-3 z-30 rounded-full bg-green-600 text-white border-2 border-green-600 px-4 py-1 text-xs font-bold shadow-lg"
+                                style={{ minWidth: '90px', textAlign: 'center' }}
+                            >
+                                $40 OFF
+                            </span>
+                        )}
+                        {/* Shopify Most Popular Tag - Top Right (only last card) */}
+                        {showShopifyPromos && isLast && (
+                            <span
+                                className="absolute -right-3 -top-3 z-30 rounded-full bg-blue-600 text-white border-2 border-blue-600 px-4 py-1 text-xs font-bold shadow-lg"
+                                style={{ minWidth: '100px', textAlign: 'center' }}
+                            >
+                                Most Popular
+                            </span>
+                        )}
+                        <p className="mb-1 mt-0 text-sm font-medium uppercase text-primaryColor">
+                            {plan.name}
+                        </p>
+                        <p className="my-0 mb-6 text-sm text-gray-600">{plan.description}</p>
+                        <div className="mb-8 overflow-hidden">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={billingCycle === 'M' ? 'monthly' : 'annual'}
+                                    initial={{ y: -50, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{ type: 'spring', stiffness: 100 }}
+                                    className="flex flex-col items-start"
+                                >
+                                    {/* Amazon strikethrough */}
+                                    {showAmazonPromos && (
+                                        <span className="text-lg text-gray-400 line-through">€{originalPrice}</span>
+                                    )}
+                                    {/* Shopify strikethrough for last card */}
+                                    {showShopifyPromos && isLast && (
+                                        <span className="text-lg text-gray-400 line-through">€{originalPrice}</span>
+                                    )}
+                                    <span className={cn(
+                                        "my-0 text-3xl font-semibold text-secondaryColor text-opacity-90",
+                                        (showAmazonPromos || (showShopifyPromos && isLast)) ? '' : 'mt-2'
+                                    )}>
+                                        €{discountedPrice}
+                                    </span>
+                                    {/* Amazon promo text */}
+                                    {showAmazonPromos && (
+                                        <span className="text-xs font-medium text-green-600 mt-1">{isLast ? '30%' : '50%'} off for a limited time!</span>
+                                    )}
+                                    {/* Shopify promo text for last card */}
+                                    {showShopifyPromos && isLast && (
+                                        <span className="text-xs font-medium text-green-600 mt-1">$40 off for a limited time!</span>
+                                    )}
+                                </motion.div>
+                            </AnimatePresence>
+                            <Link href={plan.link}>
+                                <motion.button
+                                    whileTap={{ scale: 0.985 }}
+                                    className="mt-8 w-full rounded-lg bg-primaryColor py-2 text-sm font-medium text-white hover:bg-primaryColor/90"
+                                >
+                                    Get Started
+                                </motion.button>
+                            </Link>
+                        </div>
+                        <div className='overflow-y-auto h-60 custom-scrollbar'>
+                            {plan.features.map((feature, idx) => (
+                                <div key={idx} className="mb-3 flex items-center gap-2">
+                                    <Check className="text-secondaryColor" size={18} />
+                                    <span className="text-sm text-gray-600">{feature}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div className='overflow-y-auto h-60 custom-scrollbar'>
-                        {plan.features.map((feature, idx) => (
-                            <div key={idx} className="mb-3 flex items-center gap-2">
-                                <Check className="text-secondaryColor" size={18} />
-                                <span className="text-sm text-gray-600">{feature}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            ))}
+                );
+            })}
         </div>
     )
 
@@ -136,6 +221,6 @@ const BackgroundShift = ({ shiftKey }: { shiftKey: string }) => (
     />
 )
 
-export default function PricingPage({ pricingPlans }: PricingProps) {
-    return <Pricing pricingPlans={pricingPlans} />;
+export default function PricingPage({ pricingPlans, showAmazonPromos, showShopifyPromos }: PricingProps) {
+    return <Pricing pricingPlans={pricingPlans} showAmazonPromos={showAmazonPromos} showShopifyPromos={showShopifyPromos} />;
 }

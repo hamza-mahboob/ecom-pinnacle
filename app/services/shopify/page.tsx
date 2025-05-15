@@ -364,7 +364,7 @@ export default function page() {
     {
         name: 'LIFE TIME',
         description: 'Comprehensive lifetime package for established businesses seeking continuous support, advanced Shopify store setup, and an all-inclusive social media and product management strategy.',
-        monthlyPrice: 3800,
+        monthlyPrice: 2500,
         link: '/contact-us',
         features: [
             'Logo Design',
@@ -433,7 +433,7 @@ export default function page() {
       </section>
 
       <section className='p-5'>
-        <PricingPage pricingPlans={pricingPlans} />
+        <PricingPage pricingPlans={pricingPlans} showShopifyPromos />
       </section>
 
       {/* CTA Section 2 with background image */}
